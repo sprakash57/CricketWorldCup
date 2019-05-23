@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Home = ({ navigation }) => (
+const Fixtures = ({ navigation }) => (
   <View>
-    <Text>Home Screen</Text>
+    <Text>Fixtures</Text>
   </View>
 );
 
-Home.navigationOptions = {
+Fixtures.navigationOptions = {
   drawer: () => ({
-    label: 'Home',
+    label: 'Fixtures',
   }),
   header: (navigation, defaultHeader) => ({
     ...defaultHeader,
@@ -17,4 +17,4 @@ Home.navigationOptions = {
   }),
 };
 
-export default Home;
+export default Fixtures;
