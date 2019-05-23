@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import AppToolbar from './AppToolbar';
 
-export default class Home extends React.Component {
+export default class Venue extends React.Component {
   // static navigationOptions = {
-  //   drawerLabel: 'Home',
+  //   drawerLabel: 'Venue',
   //   drawerIcon: ({ tintColor }) => (
   //     <Image
   //       source={require('../assets/burger.png')}
@@ -21,7 +21,7 @@ export default class Home extends React.Component {
     return (
       <View>
         <AppToolbar toggleDrawer={this.handleDrawer}/>
-        <Text>This is home screen</Text>
+        <Text>Venue screen</Text>
       </View>
     );
   }

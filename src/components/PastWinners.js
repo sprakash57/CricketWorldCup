@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import AppToolbar from './AppToolbar';
 
-export default class Home extends React.Component {
+export default class PastWinners extends React.Component {
   // static navigationOptions = {
   //   drawerLabel: 'Home',
   //   drawerIcon: ({ tintColor }) => (
@@ -21,7 +21,7 @@ export default class Home extends React.Component {
     return (
       <View>
         <AppToolbar toggleDrawer={this.handleDrawer}/>
-        <Text>This is home screen</Text>
+        <Text>Past winners.</Text>
       </View>
     );
   }
