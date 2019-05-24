@@ -6,8 +6,7 @@ import About from './src/components/About';
 import PastWinners from './src/components/PastWinners';
 import PointsTable from './src/components/PointsTable';
 import Ranking from './src/components/Ranking';
-import Team from './src/components/Team';
-import Venue from './src/components/Venue';
+import Team from './src/components/Squad/Team';
 import AppDrawer from './src/components/AppDrawer';
 //import Icon from 'react-native-vector-icons/Ionicons';
 // import AppToolbar from './src/components/App-toolbar';
@@ -73,10 +72,27 @@ import AppDrawer from './src/components/AppDrawer';
 //   }
 // }
 
+class App extends React.Component {
+
+  state = {
+    temp: ""
+  }
+
+  componentDidMount() {
+    console.log("setting temp");
+    this.setState({temp: "testing..."});
+  }
+
+  render() {
+    return (
+      <MyApp screenProps={{value: this.state.temp}}/>
+    );
+  }
+}
+
 const AppDrawerNavigator = createDrawerNavigator(
   {
     Home: {screen: Home},
-    Venue: {screen: Venue},
     PointsTable: {screen: PointsTable},
     PastWinners: {screen: PastWinners},
     Team: {screen: Team},
@@ -90,13 +106,5 @@ const AppDrawerNavigator = createDrawerNavigator(
 );
 
 const MyApp = createAppContainer(AppDrawerNavigator);
-
-class App extends React.Component {
-  render() {
-    return (
-      <MyApp />
-    );
-  }
-}
 
 export default App;
