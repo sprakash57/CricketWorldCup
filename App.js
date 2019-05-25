@@ -101,7 +101,8 @@ const AppDrawerNavigator = createDrawerNavigator(
   },
   {
     contentComponent: AppDrawer,
-    drawerType: "slide"
+    drawerType: "slide",
+    initialRouteName: "About"
   }
 );
 

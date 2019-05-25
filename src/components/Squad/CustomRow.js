@@ -60,8 +60,7 @@ const CustomRow = ({ country, code, members }) => {
             {list && (<View style={{flex: 1, flexDirection: "column"}}>
                 <FlatList 
                     data={members}
-                    renderItem={({item}) => <Text>{item}</Text>}
-                    keyExtractor={({item}) => index.toString()}/>
+                    renderItem={({item}) => <Text>{item}</Text>}/>
             </View>)}
         </React.Fragment>
     )
