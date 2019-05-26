@@ -1,17 +1,20 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import AppToolbar from './AppToolbar';
+import winnersList from '../app-data/winnersList';
+
+const WinnerList = ({year, series, final, venue, image, firstInnings, secondInnings, result, captain, teams, minnows, potm}) => (
+  <View>
+    <Text>{series}, {year}</Text>
+  </View>
+);
 
 export default class PastWinners extends React.Component {
-  // static navigationOptions = {
-  //   drawerLabel: 'Home',
-  //   drawerIcon: ({ tintColor }) => (
-  //     <Image
-  //       source={require('../assets/burger.png')}
-  //       style={[styles.icon, {tintColor: tintColor}]}
-  //     />
-  //   ),
-  // };
+
+  state = {
+    winnersList,
+    modalVisible: false
+  }
 
   handleDrawer = () => {
     this.props.navigation.toggleDrawer();
@@ -21,7 +24,11 @@ export default class PastWinners extends React.Component {
     return (
       <View>
         <AppToolbar toggleDrawer={this.handleDrawer}/>
-        <Text>Past winners.</Text>
+        <View style={{flex: 1}}>
+          <FlatList 
+            data={this.state.winnersList}
+            renderItem={({item}) => <WinnerList title={item}/>}/>
+        </View>
       </View>
     );
   }

@@ -5,7 +5,6 @@ import Home from './src/components/Home';
 import About from './src/components/About';
 import PastWinners from './src/components/PastWinners';
 import PointsTable from './src/components/PointsTable';
-import Ranking from './src/components/Ranking';
 import Team from './src/components/Squad/Team';
 import AppDrawer from './src/components/AppDrawer';
 //import Icon from 'react-native-vector-icons/Ionicons';
@@ -96,13 +95,12 @@ const AppDrawerNavigator = createDrawerNavigator(
     PointsTable: {screen: PointsTable},
     PastWinners: {screen: PastWinners},
     Team: {screen: Team},
-    Ranking: {screen: Ranking},
     About: {screen: About}
   },
   {
     contentComponent: AppDrawer,
     drawerType: "slide",
-    initialRouteName: "About"
+    initialRouteName: "PastWinners"
   }
 );
 
