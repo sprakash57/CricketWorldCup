@@ -21,6 +21,10 @@ const s = StyleSheet.create({
   container_text: {
     color: 'black',
     fontSize: 20,
+    flex: 0,
+    width: 400,
+    textAlign: 'center',
+    flexWrap: 'nowrap',
     fontWeight: '600',
     letterSpacing: 1
   },
@@ -42,14 +46,17 @@ const s = StyleSheet.create({
   },
 
   modal_btn_text: {
-    fontSize: 22, 
+    fontSize: 18, 
+    flex: 0,
+    flexWrap: 'nowrap',
+    width: 100,
     color:'#232882', 
     fontWeight: 'bold'
   },
 
   modal_btn_icon: {
     position: 'relative', 
-    top: 5, 
+    top: 2, 
     marginRight: 10,
   },
 
@@ -72,16 +79,16 @@ const s = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    width: 350,
+    width: 380,
     position: 'relative',
     top: -25,
     paddingBottom: 10
 },
 
 modal_innings_score: {
-  flex: 1, 
+  flex: 1,
   flexDirection: 'row',
-  alignSelf: 'stretch',
+  alignItems: 'center',
   justifyContent: 'space-between'
 },
 
@@ -114,25 +121,25 @@ const WinnerModal = ({content, display, closeModal}) => (
           <Text style={{fontSize: 16, fontWeight: 'bold', paddingLeft: 5, paddingTop: 7, color:'#232882'}}>{content.captain}</Text>
         </View>
         <View style={s.modal_match}>
-          <Text style={{fontSize: 18, fontWeight: '600', color:'#232882'}}>{content.series}, {content.year}</Text>
-          <Text style={{fontSize: 32, fontWeight: 'bold', color:'#232882'}}>{content.final}</Text>
+          <Text style={{fontSize: 18, flex: 0, flexWrap: 'nowrap', width: 300, textAlign: 'center',fontWeight: '600', color:'#232882'}}>{content.series}, {content.year}</Text>
+          <Text style={{fontSize: 32, flex: 0, flexWrap: 'nowrap', width: 400, textAlign: 'center',fontWeight: 'bold', color:'#232882'}}>{content.final}</Text>
           <Text style={{fontSize: 16, fontStyle: 'italic', fontWeight: '600', color:'#232882'}}>{content.venue}</Text>
         </View>
         <View style={s.modal_innings}>
           <View style={{flex: 2}}>
-            <Text style={{fontSize: 25, fontWeight: '800', color: 'white', textDecorationLine: 'underline'}}>Match Summary</Text>
+            <Text style={{fontSize: 25,  flex: 0, flexWrap: 'nowrap', width: 300, textAlign: 'center',fontWeight: '800', color: 'white', textDecorationLine: 'underline'}}>Match Summary</Text>
           </View>
           <View style={s.modal_innings_score}>
-            <Text style={{fontSize: 17, fontWeight: '600', color: 'white', paddingLeft: 8}}>{content.firstInnings}</Text>
-            <Text style={{fontSize: 17, fontWeight: '600', color: 'white', paddingRight: 8}}>{content.score1}</Text>
+            <Text style={{fontSize: 14,flex: 1, textAlign: 'center',fontWeight: '600', color: 'white', paddingLeft: 4}}>{content.firstInnings}</Text>
+            <Text style={{fontSize: 14,flex:1, textAlign: 'center', fontWeight: '600', color: 'white', paddingRight: 4}}>{content.score1}</Text>
           </View>
           <View style={s.modal_innings_score}>
-            <Text style={{fontSize: 17, fontWeight: '600', color: 'white', paddingLeft: 8}}>{content.secondInnings}</Text>
-            <Text style={{fontSize: 17, fontWeight: '600', color: 'white', paddingRight: 8}}>{content.score2}</Text>
+            <Text style={{fontSize: 14, flex:1, textAlign: 'center',fontWeight: '600', color: 'white', paddingLeft: 4}}>{content.secondInnings}</Text>
+            <Text style={{fontSize: 14, flex:1, textAlign: 'center',fontWeight: '600', color: 'white', paddingRight: 4}}>{content.score2}</Text>
           </View>
           <View style={{flex: 2, alignItems: 'center', justifyContent: 'space-evenly'}}>  
-            <Text style={{fontSize: 16, fontWeight: 'bold', backgroundColor: 'lightgreen', paddingLeft: 5, paddingRight: 5}}>{content.Result}</Text>
-            <Text style={{fontSize: 16, fontWeight: 'bold', color: 'white'}}>Player of the Match: {content.potm}</Text>
+            <Text style={{fontSize: 16, flex: 0, flexWrap: 'nowrap', width: 300, textAlign: 'center',fontWeight: 'bold', backgroundColor: 'lightgreen', paddingLeft: 5, paddingRight: 5}}>{content.Result}</Text>
+            <Text style={{fontSize: 16, flex: 0, flexWrap: 'nowrap', width: 400, textAlign: 'center', fontWeight: 'bold', color: 'white'}}>Player of the Match: {content.potm}</Text>
           </View>
           <View style={{flex: 2, alignSelf: 'flex-start', justifyContent: 'space-evenly'}}>
             <Text style={s.modal_innings_footer_text}>* Number of participants: {content.teams}</Text>
@@ -145,7 +152,6 @@ const WinnerModal = ({content, display, closeModal}) => (
   );
 
 const ImageSelction = (year) => {
-  console.log(year);
   switch(year) {
     case 1975:
       return <Image source={require('../assets/wc75.jpg')} />;
@@ -193,7 +199,6 @@ export default class PastWinners extends React.Component {
   }
 
   render() {
-    console.log("winner", this.state.winnersList)
     return (
       <React.Fragment>
         <AppToolbar toggleDrawer={this.handleDrawer}/>

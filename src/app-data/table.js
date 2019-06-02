@@ -24,12 +24,12 @@ export const table = [
     {
         "id": "3",
         "country": "BD",
-        "matches": "0",
-        "won": "0",
+        "matches": "1",
+        "won": "1",
         "lost": "0",
         "tie": "0",
         "nr": "0",
-        "pt": "0"
+        "pt": "2"
     },
 
     {
@@ -101,9 +101,9 @@ export const table = [
     {
         "id": "10",
         "country": "ZA",
-        "matches": "1",
+        "matches": "2",
         "won": "0",
-        "lost": "1",
+        "lost": "2",
         "tie": "0",
         "nr": "0",
         "pt": "0"

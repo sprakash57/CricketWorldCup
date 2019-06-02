@@ -29,7 +29,6 @@ const s = StyleSheet.create({
 const flagExtractor = code => code !== 'WI' ? (<Flag code={code} style={s.photo}/>) : <Image source={require('../assets/WI.png')} style={s.photo}/>;
 
 const RankTable = ({content}) => {
-  console.log('content', content);
   return  (
     <View style={s.container}>
       {flagExtractor(content.country)}
@@ -54,7 +53,6 @@ export default class PointsTable extends React.Component {
   }
 
   render() {
-    console.log('points', this.state.table);
     return (
       <React.Fragment>
         <AppToolbar toggleDrawer={this.handleDrawer}/>

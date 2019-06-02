@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Button, Share, Linking } from 'react-native';
+import { View, Text, StyleSheet, Image, Linking } from 'react-native';
 import AppToolbar from './AppToolbar';
 import Icon from 'react-native-vector-icons/Ionicons';
 import RadioGroup from 'react-native-radio-buttons-group';
@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
   about: {
     color: 'white',
     paddingTop: 30,
+    flex: 0,
+    width: 200,
+    flexWrap: 'nowrap',
+    textAlign: 'center',
     fontSize: 35,
     fontWeight: 'bold',
   },
@@ -40,6 +44,10 @@ const styles = StyleSheet.create({
   },
 
   bio: {
+    flex: 0,
+    width: 300,
+    flexWrap: 'nowrap',
+    textAlign: 'center',
     color: 'white',
     fontSize: 15,
     fontWeight: "200",
@@ -193,9 +201,13 @@ export default class About extends React.Component {
             <Text style={styles.message}>"Liked my work?! connect with me by clicking any of the above icons. 
               Send me your feedbacks/suggestion which i need to work on. Checkout my other works link down below."
             </Text>
-            <Icon.Button name="logo-google" backgroundColor='#ea214d'>More apps...</Icon.Button>
+            <Icon.Button name="logo-google" backgroundColor='#ea214d' size={20}>
+              <Text style={{flex:0, width: 100,flexWrap: 'nowrap',color: 'white', fontSize:16, fontWeight: 'bold'}}>More apps...</Text>
+            </Icon.Button>
             <View style={styles.pay}>
-              <Icon.Button name="md-cafe" backgroundColor='#ea214d' size={30}>Buy me a Coffee</Icon.Button>
+              <Icon.Button name="md-cafe" backgroundColor='#ea214d' size={30}>
+                <Text style={{flex:1, flexDirection:'row', color: 'white', fontSize:18, fontWeight: 'bold'}}>Buy me a Coffee</Text>
+              </Icon.Button>
               <RadioGroup
                 flexDirection='row'
                 radioButtons={this.state.payment} 

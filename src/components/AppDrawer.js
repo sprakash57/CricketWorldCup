@@ -13,13 +13,11 @@ const s = StyleSheet.create({
 });
 
 export default class DrawerLayout extends React.Component {
-
     navigateToScreen = (route) => (
         () => {
             const navigateAction = NavigationActions.navigate({
                 routeName: route
             });
-
             this.props.navigation.dispatch(navigateAction);
         }
     )
