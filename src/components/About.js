@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Button, Share, Linking } from 'react-native';
 import AppToolbar from './AppToolbar';
 import Icon from 'react-native-vector-icons/Ionicons';
 import RadioGroup from 'react-native-radio-buttons-group';
@@ -19,9 +19,6 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     fontSize: 35,
     fontWeight: 'bold',
-    textShadowColor: 'rgba(0, 0, 0, 0.1)',
-    textShadowOffset: {width: 2, height: 4},
-    textShadowRadius: 10
   },
 
   photo: {
@@ -81,7 +78,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 5,
     borderWidth: 0.5,
-    borderColor: 'black'
+    borderColor: 'black',
+    width: 300
   },
 
   pay_method: {
@@ -94,11 +92,15 @@ const styles = StyleSheet.create({
 
   pay_method_text: {
     textAlignVertical: 'auto', 
-    fontSize: 18, 
+    fontSize: 20, 
     marginLeft: 10,
     marginBottom: 10
   }
 })
+
+const linkedIn = 'https://www.linkedin.com/in/sunny-prakash-3780ba49/';
+const gitHub = 'https://github.com/sprakash57';
+const portfolio = 'https:sprakash57.github.io/portfolio';
 
 const PaymentSection = ({icon, value}) => (
   <View style={styles.pay_method}>
@@ -125,6 +127,29 @@ export default class About extends React.Component {
         size: 16,
       },
     ]
+  }
+
+  
+
+
+  handleLinkedIn = () => {
+    Linking.openURL(linkedIn).catch(err => console.log('An error occured', err)); 
+  }
+
+  handleGithub = () => {
+    Linking.openURL(gitHub).catch(err => console.log('An error occured', err)); 
+  }
+
+  handlePortfolio = () => {
+    Linking.openURL(portfolio).catch(err => console.log('An error occured', err)); 
+  }
+
+  handleMoreApps = () => {
+    Linking.openURL('https://play.google.com/store/apps/developer?id=Sunny+Prakash').catch(err => console.log('An error occured', err)); 
+  }
+
+  handleMail = () => {
+    Linking.openURL('mailto:sunny.prakashgm@gmail.com');
   }
 
   handlePayment = () => {
@@ -158,19 +183,19 @@ export default class About extends React.Component {
             <Text style={styles.name}>Sunny Prakash</Text>
             <Text style={styles.bio}>Web Developer | Android | BIT Mesra</Text>
             <View style={styles.social}>
-              <Icon name="logo-linkedin" size={35} color="orange" />
-              <Icon name="logo-github" size={35} color="orange" />
-              <Icon name="logo-chrome" size={35} color="orange" />
-              <Icon name="md-mail" size={35} color="orange" />
+              <Icon name="logo-linkedin" size={35} color="orange" onPress={this.handleLinkedIn}/>
+              <Icon name="logo-github" size={35} color="orange" onPress={this.handleGithub}/>
+              <Icon name="logo-chrome" size={35} color="orange" onPress={this.handlePortfolio}/>
+              <Icon name="md-mail" size={35} color="orange" onPress={this.handleMail}/>
             </View>
           </View>
           <View style={styles.more_apps}>
             <Text style={styles.message}>"Liked my work?! connect with me by clicking any of the above icons. 
               Send me your feedbacks/suggestion which i need to work on. Checkout my other works link down below."
             </Text>
-            <Icon.Button name="logo-google" backgroundColor='#ea214d'>Click for More apps</Icon.Button>
+            <Icon.Button name="logo-google" backgroundColor='#ea214d'>More apps...</Icon.Button>
             <View style={styles.pay}>
-              <Icon.Button name="logo-android" backgroundColor='#ea214d'>Buy me a Coffee</Icon.Button>
+              <Icon.Button name="md-cafe" backgroundColor='#ea214d' size={30}>Buy me a Coffee</Icon.Button>
               <RadioGroup
                 flexDirection='row'
                 radioButtons={this.state.payment} 

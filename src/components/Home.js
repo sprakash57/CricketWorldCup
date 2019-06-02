@@ -9,10 +9,10 @@ const s = StyleSheet.create({
   day_container: {
     flex:1, 
     width: 370, 
-    marginTop: 20,
+    marginTop: 10,
     marginLeft: 10,
     marginRight: 5,
-    marginBottom: 20,
+    marginBottom: 10,
     backgroundColor: 'white'
   },
 
@@ -73,11 +73,9 @@ const s = StyleSheet.create({
     top: 10,
     left: 10,
     display: 'flex',
-    // flex: 1,
     flexDirection: 'row',
     marginBottom: 30,
-    // alignSelf: 'flex-start',
-    // justifyContent: 'flex-start',
+
   },
 
   modal_btn_text: {
@@ -94,8 +92,8 @@ const s = StyleSheet.create({
 
   modal_headers: {
     backgroundColor: '#ea214d', 
-    // paddingLeft: 10, 
-    // paddingRight: 10, 
+    display: 'flex',
+    flexDirection: 'row',
     marginBottom: 15, 
     borderBottomRightRadius:20, 
     borderTopRightRadius: 20, 
@@ -106,9 +104,28 @@ const s = StyleSheet.create({
     fontSize: 25, 
     color: 'white', 
     fontWeight: 'bold', 
-    padding: 10
+    paddingRight: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 20
   },
 
+  modal_headers_image: {
+    width: 20, 
+    height: 20, 
+    position: 'relative', 
+    top: 17,
+    left: 5
+  },
+
+  modal_stats: {
+    flex: 1, 
+    flexDirection: 'row', 
+    alignItems: 'center',
+    backgroundColor: '#232882', 
+    padding: 5, 
+    marginBottom: 15,
+  }
 
 });
 
@@ -117,7 +134,9 @@ const ScheduledDay = ({day}) => <Text style={s.schedule_text}>{day}</Text>;
 const TodayMatch = ({content, handleModal}) => (
   <View style={s.day_container}>
     <View style={s.day_container_text}>
-      <Text style={{fontSize: 18, flex: 1, fontWeight: 'bold'}}>{content.dateFormat}</Text>
+      <View style={{elevation: 4, backgroundColor: '#0d98ba', padding: 2}}>
+        <Text style={{fontSize: 17, flex: 1, color: 'white', fontWeight: 'bold'}}>{content.dateFormat}</Text>
+      </View>
       <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
         <Text style={{fontSize: 18, position: 'relative', right: 6, fontWeight: 'bold'}}>Match </Text>
         <View style={s.day_match}>
@@ -139,84 +158,94 @@ const TodayMatch = ({content, handleModal}) => (
     <View style={{flex: 1, alignItems: 'center'}}>
       <Text style={{fontSize: 14, fontWeight: '600', fontFamily: 'san-serif', marginTop: 8}}>{content.stadium}</Text>
     </View>
-    <TouchableOpacity onPress={() => handleModal(content)}>
-      <Text>Compare teams</Text>
+    <TouchableOpacity onPress={() => handleModal(content)} style={{backgroundColor: 'orange', borderTopColor: '#232882', borderTopWidth: 1}}>
+      <Text style={{fontSize: 17, textAlign: 'center'}}>Compare squads</Text>
     </TouchableOpacity>
   </View>
 );
 
-const HeadToHead = ({stats, display, closeModal}) => {
-  console.log('display', display);
-  return (
+const HeadToHead = ({stats, display, closeModal}) => (
   <Modal visible={display} animationType='slide'>
     <View style={s.modal_container}>
       <View style={s.modal_btn}>
-          <TouchableWithoutFeedback onPress={closeModal}>
-            <Icon name='ios-arrow-back' size={20} color='#232882' style={s.modal_btn_icon}/>
-          </TouchableWithoutFeedback>
-          <Text style={s.modal_btn_text} onPress={closeModal}>Back</Text>
-        </View>
+        <TouchableWithoutFeedback onPress={closeModal}>
+          <Icon name='ios-arrow-back' size={20} color='#232882' style={s.modal_btn_icon}/>
+        </TouchableWithoutFeedback>
+        <Text style={s.modal_btn_text} onPress={closeModal}>Back</Text>
+      </View>
       <View style={s.modal_headers}>
+        <Image source={require('../assets/hth.png')} style={s.modal_headers_image}/>
         <Text style={s.modal_headers_text}>Head to Head</Text>
       </View>
-      <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: '#232882'}}>
-        <View >
-          <Text style={{color: 'whtite', fontSize: 20}}>Stats</Text>
-          <Text style={{color: 'whtite', fontSize: 17}}>Last 5 ODIs</Text>
-          <Text>Last 5 encounters</Text>
-          <Text>Win against in WC</Text>
-          <Text>Finale appearances</Text>
-          <Text>World Cup title</Text>
+      <View style={s.modal_stats}>
+        <View style={{flex:1,}}>
+          <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>Stats</Text>
+          <Text style={{color: 'white', fontSize: 16}}>Last 5 ODIs</Text>
+          <Text style={{color: 'white', fontSize: 16}}>Last 5 encounters</Text>
+          <Text style={{color: 'white', fontSize: 16}}>Win against in WC</Text>
+          <Text style={{color: 'white', fontSize: 16}}>Finals played</Text>
+          <Text style={{color: 'white', fontSize: 16}}>World Cup title</Text>
         </View>
-        <View >
-          <Text>{stats.team1}</Text>
-          <Text>{stats.headToHead.t1['Last 5 ODIs']}</Text>
-          <Text>{stats.headToHead.t1['Last 5 encounters']}</Text>
-          <Text>{stats.headToHead.t1['Win against in WC']}</Text>
-          <Text>{stats.headToHead.t1['Finale appearances']}</Text>
-          <Text>{stats.headToHead.t1['World Cup title']}</Text>
+        <View style={{flex:1, alignItems: 'center'}}>
+          <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>{stats.team1}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t1['Last 5 ODIs']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t1['Last 5 encounters']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t1['Win against in WC']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t1['Finals played']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t1['World Cup title']}</Text>
         </View>
-        <View >
-          <Text>{stats.team2}</Text>
-          <Text>{stats.headToHead.t2['Last 5 ODIs']}</Text>
-          <Text>{stats.headToHead.t2['Last 5 encounters']}</Text>
-          <Text>{stats.headToHead.t2['Win against in WC']}</Text>
-          <Text>{stats.headToHead.t2['Finale appearances']}</Text>
-          <Text>{stats.headToHead.t2['World Cup title']}</Text>
-        </View>
-      </View>
-      <View>
-        <Text>Star players</Text>
-      </View>
-      <View style={{flex:5, alignItems: 'center', backgroundColor: 'red'}}>
-        <View>
-          <Text>{stats.team1}</Text>
-        </View>
-        <View style={{flex: 1, flexDirection: 'row'}}>
-          <View style={{flex:1}}>
-            <Text>Role</Text>
-            <Image source={require('../assets/bat.png')} style={{width: 20, height: 20}}/>
-            <Image source={require('../assets/ball.png')} style={{width: 20, height: 20}}/>
-            <Image source={require('../assets/all.png')} style={{width: 20, height: 20}}/>
-          </View>
-          <View>
-            <Text>Player</Text>
-            <Text>{stats.headToHead.t1['Best ODI Batsman'].split(',')[0]}</Text>
-            <Text>{stats.headToHead.t1['Best ODI Bowler'].split(',')[0]}</Text>
-            <Text>{stats.headToHead.t1['Best Allrounder'].split(',')[0]}</Text>
-          </View>
-          <View>
-            <Text>ODI Ranking</Text>
-            <Text>{stats.headToHead.t1['Best ODI Batsman'].split(',')[1]}</Text>
-            <Text>{stats.headToHead.t1['Best ODI Bowler'].split(',')[1]}</Text>
-            <Text>{stats.headToHead.t1['Best Allrounder'].split(',')[1]}</Text>
-          </View>
-          
+        <View style={{flex:1, alignItems: 'center'}}>
+          <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>{stats.team2}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t2['Last 5 ODIs']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t2['Last 5 encounters']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t2['Win against in WC']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t2['Finals played']}</Text>
+          <Text style={{color: 'white', fontSize: 16}}>{stats.headToHead.t2['World Cup title']}</Text>
         </View>
       </View>
+      <View style={s.modal_headers}>
+        <Image source={require('../assets/mvp.png')} style={s.modal_headers_image}/>
+        <Text style={s.modal_headers_text}>Star players</Text>
+      </View>
+      <ModalHTHSection 
+        team={stats.team1} 
+        best={stats.headToHead.t1}
+        />
+      <ModalHTHSection 
+        team={stats.team2} 
+        best={stats.headToHead.t2}
+        />
     </View>
   </Modal>
-)}
+)
+
+const ModalHTHSection = ({team, best}) => (
+  <View style={{flex:1, alignItems: 'center', backgroundColor: '#232882', elevation: 4}}>
+    <View style={{paddingTop: 10}}>
+      <Text style={{color: 'white', fontSize: 22, fontWeight: 'bold'}}>{team}</Text>
+    </View>
+    <View style={{flex: 1, flexDirection: 'row'}}>
+      <View style={{flex:1, paddingLeft: 10}}>
+        <Text style={{color: 'white', fontSize: 18, fontWeight: 'bold', marginBottom: 10}}>Role</Text>
+        <Image source={require('../assets/bat.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
+        <Image source={require('../assets/ball.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
+        <Image source={require('../assets/all.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
+      </View>
+      <View style={{flex:2, alignItems: 'flex-start'}}>
+        <Text style={{color: 'white', fontSize: 18, fontWeight: 'bold', marginBottom: 10}}>Player</Text>
+        <Text style={{color: 'white', fontSize: 16, marginBottom: 10}}>{best['Best ODI Batsman'].split(',')[0]}</Text>
+        <Text style={{color: 'white', fontSize: 16, marginBottom: 10}}>{best['Best ODI Bowler'].split(',')[0]}</Text>
+        <Text style={{color: 'white', fontSize: 16, marginBottom: 10}}>{best['Best Allrounder'].split(',')[0]}</Text>
+      </View>
+      <View style={{flex:1, alignItems: 'center'}}>
+        <Text style={{color: 'white', fontSize: 18, fontWeight: 'bold', marginBottom: 10}}>ODI Ranking</Text>
+        <Text style={{color: 'white', fontSize: 16, marginBottom: 10}}>{best['Best ODI Batsman'].split(',')[1]}</Text>
+        <Text style={{color: 'white', fontSize: 16, marginBottom: 10}}>{best['Best ODI Bowler'].split(',')[1]}</Text>
+        <Text style={{color: 'white', fontSize: 16, marginBottom: 10}}>{best['Best Allrounder'].split(',')[1]}</Text>
+      </View>
+    </View>
+  </View>
+);
 
 const flagExtract = (team) => {
   switch(team) {
@@ -243,7 +272,6 @@ const flagExtract = (team) => {
   }
 }
 
-
 export default class Home extends React.Component {
 
   state = {
@@ -259,22 +287,14 @@ export default class Home extends React.Component {
     this.props.navigation.toggleDrawer();
   }
 
-  // componentDidMount() {
-  //   this.state.schedule.map(item => {
-  //     if (item.Date.split(' ')[0] === new Date().getMonth()) {
-        
-  //     }
-  //   })
+  // handleSquad = () => {
+  //   fetch('https://api.myjson.com/bins/ygyoo')
+  //     .then(response => response.json())
+  //     .then(data => console.log(data));
+  //   fetch('https://api.jsonbin.io/b/5ce6c9d1bc2a75194e4cf6a9/latest', {headers:{"secret-key":"$2a$10$A2yuCQpLPlo4/fAMWpmtQu3oW1Lo1cfNgxcZPDGnSSO9nBOfCGgLe"}})
+  //         .then(resp => resp.json())
+  //         .then(data => console.log(data))
   // }
-
-  handleSquad = () => {
-    // fetch('https://api.myjson.com/bins/ygyoo')
-    //   .then(response => response.json())
-    //   .then(data => console.log(data));
-    // fetch('https://api.jsonbin.io/b/5ce6c9d1bc2a75194e4cf6a9/latest', {headers:{"secret-key":"$2a$10$A2yuCQpLPlo4/fAMWpmtQu3oW1Lo1cfNgxcZPDGnSSO9nBOfCGgLe"}})
-    //       .then(resp => resp.json())
-    //       .then(data => console.log(data))
-  }
 
   handleModalVisibility = (item) => {
     console.log('item', item);
@@ -291,7 +311,7 @@ export default class Home extends React.Component {
         <View style={{flex: 1, backgroundColor: '#232882'}}>
           <View style={{flex: 1}}>
             <ScheduledDay day={this.state.today} />
-            <View style={{flex: 9}}>
+            <View style={{flex: 8}}>
               <ScrollView horizontal={true}>
                 {
                   this.state.schedule.map(item => {
@@ -306,9 +326,27 @@ export default class Home extends React.Component {
           </View>
           <View style={{flex: 1}}>
             <ScheduledDay day={this.state.upcoming} />
+            <ScrollView horizontal={true}>
+              {
+                this.state.schedule.map(item => {
+                  if (item.date > (new Date().getMonth()+" "+new Date().getDate())) {
+                    return <TodayMatch key={parseInt(item.match)} content={item} handleModal={() => this.handleModalVisibility(item)}/>
+                  }
+                })
+              }
+            </ScrollView>
           </View>
           <View style={{flex: 1}}>
             <ScheduledDay day={this.state.past} />
+            <ScrollView horizontal={true}>
+              {
+                this.state.schedule.map(item => {
+                  if (item.date < (new Date().getMonth()+" "+new Date().getDate())) {
+                    return <TodayMatch key={parseInt(item.match)} content={item} handleModal={() => this.handleModalVisibility(item)}/>
+                  }
+                })
+              }
+            </ScrollView>
           </View> 
         </View>
         {this.state.modalVisible && (<HeadToHead 

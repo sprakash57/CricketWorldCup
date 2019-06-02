@@ -70,7 +70,7 @@ export default class PointsTable extends React.Component {
           </View>
           <View style={{flex: 9}}>
             <ScrollView>
-              {this.state.table.map(item => <RankTable key={item.id} content={item}/>)}
+              {this.state.table.map(item => <RankTable key={parseInt(item.id)} content={item}/>)}
             </ScrollView>
           </View>
         </View>

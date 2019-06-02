@@ -106,7 +106,7 @@ const CustomRow = ({ country, code, members, rank, stats }) => {
     }
 
     return (
-        <View key={parseInt(rank)}>
+        <View>
             <View style={styles.container}>
                 { code !== 'WI' ? (<Flag code={code} style={styles.photo}/>) : <Image source={require('../../assets/WI.png')} style={styles.photo}/>}
                 <View style={styles.container_text}>
@@ -128,12 +128,14 @@ const CustomRow = ({ country, code, members, rank, stats }) => {
                     </View>    
                 </View>    
             </View>
-            {list && (<View style={{flex: 1, flexDirection: "column"}}>
-                <FlatList 
-                    style={styles.member_list}
-                    data={members}
-                    renderItem={({item}) => <Text style={styles.member_list_text}>{item}</Text>}/>
-            </View>)}
+            {list && (
+                <View style={{flex: 1, flexDirection: "column"}}>
+                    <FlatList 
+                        style={styles.member_list}
+                        data={members}
+                        keyExtractor={item => item}
+                        renderItem={({item}) => <Text style={styles.member_list_text}>{item}</Text>}/>
+                </View>)}
         </View>
     )
 };

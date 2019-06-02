@@ -24,6 +24,7 @@ export default class Team extends React.Component {
             data={this.state.squad}
             renderItem={({ item }) => (
               <CustomRow
+                key={parseInt(item.rank)}
                 country={item.country}
                 code={item.code}
                 rank={item.rank}

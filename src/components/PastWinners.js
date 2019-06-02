@@ -100,9 +100,7 @@ modal_innings_footer_text: {
 
 })
 
-const WinnerModal = ({content, display, closeModal}) => {
-  console.log('content', content);
-  return (
+const WinnerModal = ({content, display, closeModal}) => (
     <Modal visible={display} animationType='fade'>
       <View style={s.modal_container}>
         <View style={s.modal_btn}>
@@ -145,7 +143,6 @@ const WinnerModal = ({content, display, closeModal}) => {
       </View>
     </Modal>
   );
-}
 
 const ImageSelction = (year) => {
   console.log(year);
@@ -203,7 +200,7 @@ export default class PastWinners extends React.Component {
         <View style={{flex: 1}}>
           <ScrollView style={{backgroundColor: '#232882'}}>
             {this.state.winnersList.map(item => (
-              <TouchableOpacity key={item.year} style={s.container} onPress={() => this.handleModalVisibility(item)}>
+              <TouchableOpacity key={parseInt(item.year)} style={s.container} onPress={() => this.handleModalVisibility(item)}>
                 <Text style={s.container_text}>{item.series}, {item.year}</Text>
               </TouchableOpacity>
               )
