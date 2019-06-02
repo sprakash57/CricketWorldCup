@@ -1,1426 +1,1435 @@
 export const schedule = [
     {
-        "Match": 1,
-        "Stadium": "Kennington Oval, London",
-        "Team1": "England",
-        "Team2": "South Africa",
-        "Date": "May 30",
-        "result": "",
+        "match": "1",
+        "stadium": "Kennington Oval, London",
+        "team1": "England",
+        "team2": "South Africa",
+        "date": "4 30",
+        "dateFormat": 'May 30',
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 2,
                 "Win against in WC": 4,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "South Africa": {
+            "t2": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 3,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             }
         }
     },
 
     {
-        "Match": "2",
-        "Stadium": "Trent Bridge, Nottingham",
-        "Team1": "West Indies",
-        "Team2": "Pakistan",
-        "Date": "May 31",
-        "result": "",
+        "match": "2",
+        "stadium": "Trent Bridge, Nottingham",
+        "team1": "West Indies",
+        "team2": "Pakistan",
+        "date": "4 31",
+        "dateFormat": "May 31",
         "headToHead": {
-            "West Indies": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 7,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 4,
                 "Win against in WC": 3,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "3",
-        "Stadium": "Sophia Gardens, Cardiff",
-        "Team1": "New Zealand",
-        "Team2": "Sri Lanka",
-        "Date": "June 1",
-        "result": "",
+        "match": "3",
+        "stadium": "Sophia Gardens, Cardiff",
+        "team1": "New Zealand",
+        "team2": "Sri Lanka",
+        "date": "5 1",
+        "dateFormat": "June 1",
         "headToHead": {
-            "New Zealand": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 1,
                 "Win against in WC": 7,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 4,
                 "Win against in WC": 3,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "4",
-        "Stadium": "County Ground, Bristol",
-        "Team1": "Afghanistan",
-        "Team2": "Australia",
-        "Date": "June 1",
-        "result": "",
+        "match": "4",
+        "stadium": "County Ground, Bristol",
+        "team1": "Afghanistan",
+        "team2": "Australia",
+        "date": "5 1",
+        "dateFormat": "June 1",
         "headToHead": {
-            "Afghanistan": {
+            "t1": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             },
-            "Australia": {
+            "t2": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 2,
                 "Win against in WC": 1,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             }
         }
     },
 
     {
-        "Match": "5",
-        "Stadium": "Kennington Oval, London",
-        "Team1": "South Africa",
-        "Team2": "Bangladesh",
-        "Date": "June 2",
-        "result": "",
+        "match": "5",
+        "stadium": "Kennington Oval, London",
+        "team1": "South Africa",
+        "team2": "Bangladesh",
+        "date": "5 2",
+        "dateFormat": "June 2",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 2,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "Bangladesh": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 2,
                 "Win against in WC": 1,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             }
         }
     },
 
     {
-        "Match": "6",
-        "Stadium": "Trent Bridge, Nottingham",
-        "Team1": "England",
-        "Team2": "Pakistan",
-        "Date": "June 3",
-        "result": "",
+        "match": "6",
+        "stadium": "Trent Bridge, Nottingham",
+        "team1": "England",
+        "team2": "Pakistan",
+        "date": "5 3",
+        "dateFormat": "June 3",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 4,
                 "Win against in WC": 4,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 0,
                 "Win against in WC": 4,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "7",
-        "Stadium": "Sophia Gardens, Cardiff",
-        "Team1": "Afghanistan",
-        "Team2": "Sri Lanka",
-        "Date": "June 4",
-        "result": "",
+        "match": "7",
+        "stadium": "Sophia Gardens, Cardiff",
+        "team1": "Afghanistan",
+        "team2": "Sri Lanka",
+        "date": "5 4",
+        "dateFormat": "June 4",
         "headToHead": {
-            "Afghanistan": {
+            "t1": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 1,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 2,
                 "Win against in WC": 1,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "8",
-        "Stadium": "The Rose Bowl, Southampton",
-        "Team1": "South Africa",
-        "Team2": "India",
-        "Date": "June 5",
-        "result": "",
+        "match": "8",
+        "stadium": "The Rose Bowl, Southampton",
+        "team1": "South Africa",
+        "team2": "India",
+        "date": "5 5",
+        "dateFormat": "June 5",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 1,
                 "Win against in WC": 3,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "India": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 4,
                 "Win against in WC": 2,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             }
         }
     },
 
     {
-        "Match": "9",
-        "Stadium": "Kennington Oval, London",
-        "Team1": "Bangladesh",
-        "Team2": "New Zealand",
-        "Date": "June 5",
-        "result": "",
+        "match": "9",
+        "stadium": "Kennington Oval, London",
+        "team1": "Bangladesh",
+        "team2": "New Zealand",
+        "date": "5 5",
+        "dateFormat": "June 5",
         "headToHead": {
-            "Bangladesh": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 3,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             },
-            "New Zealand": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 2,
                 "Win against in WC": 4,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             }
         }
     },
 
     {
-        "Match": "10",
-        "Stadium": "Trent Bridge, Nottingham",
-        "Team1": "Australia",
-        "Team2": "West Indies",
-        "Date": "June 6",
-        "result": "",
+        "match": "10",
+        "stadium": "Trent Bridge, Nottingham",
+        "team1": "Australia",
+        "team2": "West Indies",
+        "date": "5 6",
+        "dateFormat": "June 6",
         "headToHead": {
-            "Australia": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 4,
                 "Win against in WC": 4,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             },
-            "West Indies": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 5,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             }
         }
     },
 
     {
-        "Match": "11",
-        "Stadium": "County Ground, Bristol",
-        "Team1": "Pakistan",
-        "Team2": "Sri Lanka",
-        "Date": "June 7",
-        "result": "",
+        "match": "11",
+        "stadium": "County Ground, Bristol",
+        "team1": "Pakistan",
+        "team2": "Sri Lanka",
+        "date": "5 7",
+        "dateFormat": "June 7",
         "headToHead": {
-            "Pakistan": {
+            "t1": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 5,
                 "Win against in WC": 7,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "12",
-        "Stadium": "Sophia Gardens, Cardiff",
-        "Team1": "England",
-        "Team2": "Bangladesh",
-        "Date": "June 8",
-        "result": "",
+        "match": "12",
+        "stadium": "Sophia Gardens, Cardiff",
+        "team1": "England",
+        "team2": "Bangladesh",
+        "date": "5 8",
+        "dateFormat": "June 8",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 1,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "Bangladesh": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 2,
                 "Win against in WC": 2,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             }
         }
     },
 
     {
-        "Match": "13",
-        "Stadium": "The Cooper Associates County Ground, Taunton",
-        "Team1": "Afghanistan",
-        "Team2": "New Zealand",
-        "Date": "June 8",
-        "result": "",
+        "match": "13",
+        "stadium": "The Cooper Associates County Ground, Taunton",
+        "team1": "Afghanistan",
+        "team2": "New Zealand",
+        "date": "5 8",
+        "dateFormat": "June 8",
         "headToHead": {
-            "Afghanistan": {
+            "t1": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             },
-            "New Zealand": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 1,
                 "Win against in WC": 1,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             }
         }
     },
 
     {
-        "Match": "14",
-        "Stadium": "Kennington Oval, London",
-        "Team1": "India",
-        "Team2": "Australia",
-        "Date": "June 9",
-        "result": "",
+        "match": "14",
+        "stadium": "Kennington Oval, London",
+        "team1": "India",
+        "team2": "Australia",
+        "date": "5 9",
+        "dateFormat": "June 9",
         "headToHead": {
-            "India": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 2,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             },
-            "Australia": {
+            "t2": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 8,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             }
         }
     },
 
     {
-        "Match": "15",
-        "Stadium": "The Rose Bowl, Southampton",
-        "Team1": "South Africa",
-        "Team2": "West Indies",
-        "Date": "June 10",
-        "result": "",
+        "match": "15",
+        "stadium": "The Rose Bowl, Southampton",
+        "team1": "South Africa",
+        "team2": "West Indies",
+        "date": "5 10",
+        "dateFormat": "June 10",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 4,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "West Indies": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 2,
                 "Win against in WC": 2,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             }
         }
     },
 
     {
-        "Match": "16",
-        "Stadium": "County Ground, Bristol",
-        "Team1": "Bangladesh",
-        "Team2": "Sri Lanka",
-        "Date": "June 11",
-        "result": "",
+        "match": "16",
+        "stadium": "County Ground, Bristol",
+        "team1": "Bangladesh",
+        "team2": "Sri Lanka",
+        "date": "5 11",
+        "dateFormat": "June 11",
         "headToHead": {
-            "Bangladesh": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 2,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 3,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "17",
-        "Stadium": "The Cooper Associates County Ground, Taunton",
-        "Team1": "Australia",
-        "Team2": "Pakistan",
-        "Date": "June 12",
-        "result": "",
+        "match": "17",
+        "stadium": "The Cooper Associates County Ground, Taunton",
+        "team1": "Australia",
+        "team2": "Pakistan",
+        "date": "5 12",
+        "dateFormat": "June 12",
         "headToHead": {
-            "Australia": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 5,
                 "Win against in WC": 5,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 0,
                 "Win against in WC": 4,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "18",
-        "Stadium": "Trent Bridge, Nottingham",
-        "Team1": "India",
-        "Team2": "New Zealand",
-        "Date": "June 13",
-        "result": "",
+        "match": "18",
+        "stadium": "Trent Bridge, Nottingham",
+        "team1": "India",
+        "team2": "New Zealand",
+        "date": "5 13",
+        "dateFormat": "June 13",
         "headToHead": {
-            "India": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 4,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             },
-            "New Zealand": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 1,
                 "Win against in WC": 4,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             }
         }
     },
 
     {
-        "Match": "19",
-        "Stadium": "The Rose Bowl, Southampton",
-        "Team1": "England",
-        "Team2": "West Indies",
-        "Date": "June 14",
-        "result": "",
+        "match": "19",
+        "stadium": "The Rose Bowl, Southampton",
+        "team1": "England",
+        "team2": "West Indies",
+        "date": "5 14",
+        "dateFormat": "June 14",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 5,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "West Indies": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 2,
                 "Win against in WC": 1,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             }
         }
     },
 
     {
-        "Match": "20",
-        "Stadium": "Kennington Oval, London",
-        "Team1": "Sri Lanka",
-        "Team2": "Australia",
-        "Date": "June 15",
-        "result": "",
+        "match": "20",
+        "stadium": "Kennington Oval, London",
+        "team1": "Sri Lanka",
+        "team2": "Australia",
+        "date": "5 15",
+        "dateFormat": "June 15",
         "headToHead": {
-            "Australia": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 4,
                 "Win against in WC": 7,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 1,
                 "Win against in WC": 2,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "21",
-        "Stadium": "Sophia Gardens, Cardiff",
-        "Team1": "South Africa",
-        "Team2": "Afghanistan",
-        "Date": "June 15",
-        "result": "",
+        "match": "21",
+        "stadium": "Sophia Gardens, Cardiff",
+        "team1": "South Africa",
+        "team2": "Afghanistan",
+        "date": "5 15",
+        "dateFormat": "June 15",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "Afghanistan": {
+            "t2": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             }
         }
     },
 
     {
-        "Match": "22",
-        "Stadium": "Emirates Old Trafford, Manchester",
-        "Team1": "India",
-        "Team2": "Pakistan",
-        "Date": "June 16",
-        "result": "",
+        "match": "22",
+        "stadium": "Emirates Old Trafford, Manchester",
+        "team1": "India",
+        "team2": "Pakistan",
+        "date": "5 16",
+        "dateFormat": "June 16",
         "headToHead": {
-            "India": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 4,
                 "Win against in WC": 6,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 1,
                 "Win against in WC": 0,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "23",
-        "Stadium": "The Cooper Associates County Ground, Taunton",
-        "Team1": "West Indies",
-        "Team2": "Bangladesh",
-        "Date": "June 17",
-        "result": "",
+        "match": "23",
+        "stadium": "The Cooper Associates County Ground, Taunton",
+        "team1": "West Indies",
+        "team2": "Bangladesh",
+        "date": "5 17",
+        "dateFormat": "June 17",
         "headToHead": {
-            "Bangladesh": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 4,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             },
-            "West Indies": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             }
         }
     },
 
     {
-        "Match": "24",
-        "Stadium": "Emirates Old Trafford, Manchester",
-        "Team1": "England",
-        "Team2": "Afghanistan",
-        "Date": "June 18",
-        "result": "",
+        "match": "24",
+        "stadium": "Emirates Old Trafford, Manchester",
+        "team1": "England",
+        "team2": "Afghanistan",
+        "date": "5 18",
+        "dateFormat": "June 18",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 1,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "Afghanistan": {
+            "t2": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             }
         }
     },
 
     {
-        "Match": "25",
-        "Stadium": "Edgbaston, Birmingham",
-        "Team1": "New Zealand",
-        "Team2": "South Africa",
-        "Date": "June 19",
-        "result": "",
+        "match": "25",
+        "stadium": "Edgbaston, Birmingham",
+        "team1": "New Zealand",
+        "team2": "South Africa",
+        "date": "5 19",
+        "dateFormat": "June 19",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 2,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "New Zealand": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 2,
                 "Win against in WC": 6,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             }
         }
     },
 
     {
-        "Match": "26",
-        "Stadium": "Trent Bridge, Nottingham",
-        "Team1": "Australia",
-        "Team2": "Bangladesh",
-        "Date": "June 20",
-        "result": "",
+        "match": "26",
+        "stadium": "Trent Bridge, Nottingham",
+        "team1": "Australia",
+        "team2": "Bangladesh",
+        "date": "5 20",
+        "dateFormat": "June 20",
         "headToHead": {
-            "Bangladesh": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             },
-            "Australia": {
+            "t2": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 2,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             }
         }
     },
 
     {
-        "Match": "27",
-        "Stadium": "Headingley, Leeds",
-        "Team1": "England",
-        "Team2": "Sri Lanka",
-        "Date": "June 21",
-        "result": "",
+        "match": "27",
+        "stadium": "Headingley, Leeds",
+        "team1": "England",
+        "team2": "Sri Lanka",
+        "date": "5 21",
+        "dateFormat": "June 21",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 4,
                 "Win against in WC": 6,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 1,
                 "Win against in WC": 4,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "28",
-        "Stadium": "The Rose Bowl, Southampton",
-        "Team1": "India",
-        "Team2": "Afghanistan",
-        "Date": "June 22",
-        "result": "",
+        "match": "28",
+        "stadium": "The Rose Bowl, Southampton",
+        "team1": "India",
+        "team2": "Afghanistan",
+        "date": "5 22",
+        "dateFormat": "June 22",
         "headToHead": {
-            "India": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 0,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             },
-            "Afghanistan": {
+            "t2": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             }
         }
     },
 
     {
-        "Match": "29",
-        "Stadium": "Emirates Old Trafford, Manchester",
-        "Team1": "West Indies",
-        "Team2": "New Zealand",
-        "Date": "June 22",
-        "result": "",
+        "match": "29",
+        "stadium": "Emirates Old Trafford, Manchester",
+        "team1": "West Indies",
+        "team2": "New Zealand",
+        "date": "5 22",
+        "dateFormat": "June 22",
         "headToHead": {
-            "West Indies": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             },
-            "New Zealand": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 4,
                 "Win against in WC": 4,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             }
         }
     },
 
     {
-        "Match": "30",
-        "Stadium": "Lord's, London",
-        "Team1": "Pakistan",
-        "Team2": "South Africa",
-        "Date": "June 23",
-        "result": "",
+        "match": "30",
+        "stadium": "Lord's, London",
+        "team1": "Pakistan",
+        "team2": "South Africa",
+        "date": "5 23",
+        "dateFormat": "June 23",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 3,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 2,
                 "Win against in WC": 1,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "31",
-        "Stadium": "The Rose Bowl, Southampton",
-        "Team1": "Bangladesh",
-        "Team2": "Afghanistan",
-        "Date": "June 24",
-        "result": "",
+        "match": "31",
+        "stadium": "The Rose Bowl, Southampton",
+        "team1": "Bangladesh",
+        "team2": "Afghanistan",
+        "date": "5 24",
+        "dateFormat": "June 24",
         "headToHead": {
-            "Bangladesh": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 3,
                 "Win against in WC": 1,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             },
-            "Afghanistan": {
+            "t2": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 2,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             }
         }
     },
 
     {
-        "Match": "32",
-        "Stadium": "Lord's, London",
-        "Team1": "England",
-        "Team2": "Australia",
-        "Date": "June 25",
-        "result": "",
+        "match": "32",
+        "stadium": "Lord's, London",
+        "team1": "England",
+        "team2": "Australia",
+        "date": "5 25",
+        "dateFormat": "June 25",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 5,
                 "Win against in WC": 2,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "Australia": {
+            "t2": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 0,
                 "Win against in WC": 5,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             }
         }
     },
 
     {
-        "Match": "33",
-        "Stadium": "Edgbaston, Birmingham",
-        "Team1": "New Zealand",
-        "Team2": "Pakistan",
-        "Date": "June 26",
-        "result": "",
+        "match": "33",
+        "stadium": "Edgbaston, Birmingham",
+        "team1": "New Zealand",
+        "team2": "Pakistan",
+        "date": "5 26",
+        "dateFormat": "June 26",
         "headToHead": {
-            "New Zealand": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 3,
                 "Win against in WC": 2,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 1,
                 "Win against in WC": 6,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "34",
-        "Stadium": "Emirates Old Trafford, Manchester",
-        "Team1": "West Indies",
-        "Team2": "India",
-        "Date": "June 27",
-        "result": "",
+        "match": "34",
+        "stadium": "Emirates Old Trafford, Manchester",
+        "team1": "West Indies",
+        "team2": "India",
+        "date": "5 27",
+        "dateFormat": "June 27",
         "headToHead": {
-            "West Indies": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             },
-            "India": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 3,
                 "Win against in WC": 5,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             }
         }
     },
 
     {
-        "Match": "35",
-        "Stadium": "Riverside Ground, Chester-le-Street",
-        "Team1": "Sri Lanka",
-        "Team2": "South Africa",
-        "Date": "June 28",
-        "result": "",
+        "match": "35",
+        "stadium": "Riverside Ground, Chester-le-Street",
+        "team1": "Sri Lanka",
+        "team2": "South Africa",
+        "date": "5 28",
+        "dateFormat": "June 28",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 5,
                 "Win against in WC": 3,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 0,
                 "Win against in WC": 1,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "36",
-        "Stadium": "Headingley, Leeds",
-        "Team1": "Pakistan",
-        "Team2": "Afghanistan",
-        "Date": "June 29",
-        "result": "",
+        "match": "36",
+        "stadium": "Headingley, Leeds",
+        "team1": "Pakistan",
+        "team2": "Afghanistan",
+        "date": "5 29",
+        "dateFormat": "June 29",
         "headToHead": {
-            "Afghanistan": {
+            "t1": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 0,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 3,
                 "Win against in WC": 0,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "37",
-        "Stadium": "Lord's, London",
-        "Team1": "New Zealand",
-        "Team2": "Australia",
-        "Date": "June 29",
-        "result": "",
+        "match": "37",
+        "stadium": "Lord's, London",
+        "team1": "New Zealand",
+        "team2": "Australia",
+        "date": "5 29",
+        "dateFormat": "June 29",
         "headToHead": {
-            "New Zealand": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 2,
                 "Win against in WC": 3,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             },
-            "Australia": {
+            "t2": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 1,
                 "Win against in WC": 7,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             }
         }
     },
 
     {
-        "Match": "38",
-        "Stadium": "Edgbaston, Birmingham",
-        "Team1": "England",
-        "Team2": "India",
-        "Date": "June 30",
-        "result": "",
+        "match": "38",
+        "stadium": "Edgbaston, Birmingham",
+        "team1": "England",
+        "team2": "India",
+        "date": "5 30",
+        "dateFormat": "June 30",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "India": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 2,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             }
         }
     },
 
     {
-        "Match": "39",
-        "Stadium": "Riverside Ground, Chester-le-Street",
-        "Team1": "Sri Lanka",
-        "Team2": "West Indies",
-        "Date": "July 01",
-        "result": "",
+        "match": "39",
+        "stadium": "Riverside Ground, Chester-le-Street",
+        "team1": "Sri Lanka",
+        "team2": "West Indies",
+        "date": "6 01",
+        "dateFormat": "July 1",
         "headToHead": {
-            "West Indies": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 4,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 4,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "40",
-        "Stadium": "Edgbaston, Birmingham",
-        "Team1": "Bangladesh",
-        "Team2": "India",
-        "Date": "July 02",
-        "result": "",
+        "match": "40",
+        "stadium": "Edgbaston, Birmingham",
+        "team1": "Bangladesh",
+        "team2": "India",
+        "date": "6 2",
+        "dateFormat": "July 2",
         "headToHead": {
-            "Bangladesh": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 1,
                 "Win against in WC": 1,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             },
-            "India": {
+            "t2": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 4,
                 "Win against in WC": 2,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             }
         }
     },
 
     {
-        "Match": "41",
-        "Stadium": "Riverside Ground, Chester-le-Street",
-        "Team1": "England",
-        "Team2": "New Zealand",
-        "Date": "July 03",
-        "result": "",
+        "match": "41",
+        "stadium": "Riverside Ground, Chester-le-Street",
+        "team1": "England",
+        "team2": "New Zealand",
+        "date": "6 3",
+        "dateFormat": "July 3",
         "headToHead": {
-            "England": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 3,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 0,
-                "Best ODI Batsman": "J.E. Root(6)",
-                "Best ODI Bowler": "C.R. Woakes(9)",
-                "Best Allrounder": "C.R. Woakes(10)"
+                "Best ODI Batsman": "J.E. Root,6",
+                "Best ODI Bowler": "C.R. Woakes,9",
+                "Best Allrounder": "C.R. Woakes,10"
             },
-            "New Zealand": {
+            "t2": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 2,
                 "Win against in WC": 5,
                 "Finale appearances": 1,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Ross Taylor(3)",
-                "Best ODI Bowler": "T.A. Boult(2)",
-                "Best Allrounder": "M.J. Santner(5)"
+                "Best ODI Batsman": "Ross Taylor,3",
+                "Best ODI Bowler": "T.A. Boult,2",
+                "Best Allrounder": "M.J. Santner,5"
             }
         }
     },
 
     {
-        "Match": "42",
-        "Stadium": "Riverside Ground, Chester-le-Street",
-        "Team1": "Afghanistan",
-        "Team2": "West Indies",
-        "Date": "July 04",
-        "result": "",
+        "match": "42",
+        "stadium": "Riverside Ground, Chester-le-Street",
+        "team1": "Afghanistan",
+        "team2": "West Indies",
+        "date": "6 4",
+        "dateFormat": "July 4",
         "headToHead": {
-            "West Indies": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 1,
                 "Win against in WC": 4,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "S.D. Hope(4)",
-                "Best ODI Bowler": "Jason Holder(39)",
-                "Best Allrounder": "Jason Holder(6)"
+                "Best ODI Batsman": "S.D. Hope,4",
+                "Best ODI Bowler": "Jason Holder,39",
+                "Best Allrounder": "Jason Holder,6"
             },
-            "Afghanistan": {
+            "t2": {
                 "Last 5 ODIs": 3,
                 "Last 5 encounters": 3,
                 "Win against in WC": 0,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mohammad Shahzad(38)",
-                "Best ODI Bowler": "Rashid Khan(3)",
-                "Best Allrounder": "Rashid Khan(2)"
+                "Best ODI Batsman": "Mohammad Shahzad,38",
+                "Best ODI Bowler": "Rashid Khan,3",
+                "Best Allrounder": "Rashid Khan,2"
             }
         }
     },
 
     {
-        "Match": "43",
-        "Stadium": "Lord's, London",
-        "Team1": "Pakistan",
-        "Team2": "Bangladesh",
-        "Date": "July 05",
-        "result": "",
+        "match": "43",
+        "stadium": "Lord's, London",
+        "team1": "Pakistan",
+        "team2": "Bangladesh",
+        "date": "6 5",
+        "dateFormat": "July 5",
         "headToHead": {
-            "Bangladesh": {
+            "t1": {
                 "Last 5 ODIs": 4,
                 "Last 5 encounters": 4,
                 "Win against in WC": 1,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Mushfiqur Rahim(20)",
-                "Best ODI Bowler": "Mustafizur Rahman(11)",
-                "Best Allrounder": "Shakib Al Hasan(1)"
+                "Best ODI Batsman": "Mushfiqur Rahim,20",
+                "Best ODI Bowler": "Mustafizur Rahman,11",
+                "Best Allrounder": "Shakib Al Hasan,1"
             },
-            "Pakistan": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 1,
                 "Win against in WC": 0,
                 "Finale appearances": 2,
                 "World Cup title": 1,
-                "Best ODI Batsman": "Babar Azam(7)",
-                "Best ODI Bowler": "Hasan Ali(26)",
-                "Best Allrounder": "Mohammad Hafeez(4)"
+                "Best ODI Batsman": "Babar Azam,7",
+                "Best ODI Bowler": "Hasan Ali,26",
+                "Best Allrounder": "Mohammad Hafeez,4"
             }
         }
     },
 
     {
-        "Match": "44",
-        "Stadium": "Headingley, Leeds",
-        "Team1": "Sri Lanka",
-        "Team2": "India",
-        "Date": "July 06",
-        "result": "",
+        "match": "44",
+        "stadium": "Headingley, Leeds",
+        "team1": "Sri Lanka",
+        "team2": "India",
+        "date": "6 6",
+        "dateFormat": "July 6",
         "headToHead": {
-            "India": {
+            "t1": {
                 "Last 5 ODIs": 2,
                 "Last 5 encounters": 4,
                 "Win against in WC": 3,
                 "Finale appearances": 3,
                 "World Cup title": 2,
-                "Best ODI Batsman": "Virat Kohli(1)",
-                "Best ODI Bowler": "J.J. Bumrah(1)",
-                "Best Allrounder": "Kedar Jadhav(14)"
+                "Best ODI Batsman": "Virat Kohli,1",
+                "Best ODI Bowler": "J.J. Bumrah,1",
+                "Best Allrounder": "Kedar Jadhav,14"
             },
-            "Sri Lanka": {
+            "t2": {
                 "Last 5 ODIs": 0,
                 "Last 5 encounters": 1,
                 "Win against in WC": 4,
                 "Finale appearances": 3,
                 "World Cup title": 1,
-                "Best ODI Batsman": "N. Dickwella(34)",
-                "Best ODI Bowler": "A. Dananjaya(15)",
-                "Best Allrounder": "A.D. Mathews(10)"
+                "Best ODI Batsman": "N. Dickwella,34",
+                "Best ODI Bowler": "A. Dananjaya,15",
+                "Best Allrounder": "A.D. Mathews,10"
             }
         }
     },
 
     {
-        "Match": "45",
-        "Stadium": "Emirates Old Trafford, Manchester",
-        "Team1": "Australia",
-        "Team2": "South Africa",
-        "Date": "July 06",
-        "result": "",
+        "match": "45",
+        "stadium": "Emirates Old Trafford, Manchester",
+        "team1": "Australia",
+        "team2": "South Africa",
+        "date": "6 6",
+        "dateFormat": "July 6",
         "headToHead": {
-            "South Africa": {
+            "t1": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 4,
                 "Win against in WC": 1,
                 "Finale appearances": 0,
                 "World Cup title": 0,
-                "Best ODI Batsman": "Q. de Kock(4)",
-                "Best ODI Bowler": "Imran Tahir(4)",
-                "Best Allrounder": "Andile Phehlukwayo(14)"
+                "Best ODI Batsman": "Q. de Kock,4",
+                "Best ODI Bowler": "Imran Tahir,4",
+                "Best Allrounder": "Andile Phehlukwayo,14"
             },
-            "Australia": {
+            "t2": {
                 "Last 5 ODIs": 5,
                 "Last 5 encounters": 1,
                 "Win against in WC": 3,
                 "Finale appearances": 7,
                 "World Cup title": 5,
-                "Best ODI Batsman": "Aron Finch(11)",
-                "Best ODI Bowler": "P.J. Cummins(6)",
-                "Best Allrounder": "Glenn Maxwell(16)"
+                "Best ODI Batsman": "Aron Finch,11",
+                "Best ODI Bowler": "P.J. Cummins,6",
+                "Best Allrounder": "Glenn Maxwell,16"
             }
         }
     },
 
     {
-        "Match": "46",
-        "Stadium": "Emirates Old Trafford, Manchester",
-        "Team1": "TBD",
-        "Team2": "TBD",
-        "Date": "July 09",
-        "result": "",
-        "headToHead": ""
+        "match": "46",
+        "stadium": "Emirates Old Trafford, Manchester",
+        "team1": "TBD",
+        "team2": "TBD",
+        "date": "6 9",
+        "dateFormat": "July 9",
+        "headToHead": {
+            't1': '',
+            't2': ''
+        }
     },
 
     {
-        "Match": "47",
-        "Stadium": "Edgbaston, Birmingham",
-        "Team1": "TBD",
-        "Team2": "TBD",
-        "Date": "July 11",
-        "result": "",
-        "headToHead": ""
+        "match": "47",
+        "stadium": "Edgbaston, Birmingham",
+        "team1": "TBD",
+        "team2": "TBD",
+        "date": "6 11",
+        "dateFormat": "July 11",
+        "headToHead": {
+            't1': '',
+            't2': ''
+        }
     },
 
     {
-        "Match": "48",
-        "Stadium": "Lord's, London",
-        "Team1": "TBD",
-        "Team2": "TBD",
-        "Date": "July 14",
-        "result": "",
-        "headToHead": ""
+        "match": "48",
+        "stadium": "Lord's, London",
+        "team1": "TBD",
+        "team2": "TBD",
+        "date": "6 14",
+        "dateFormat": "July 14",
+        "headToHead": {
+            't1': '',
+            't2': ''
+        }
     },
 ]

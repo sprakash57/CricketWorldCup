@@ -99,8 +99,7 @@ const AppDrawerNavigator = createDrawerNavigator(
   },
   {
     contentComponent: AppDrawer,
-    drawerType: "slide",
-    initialRouteName: "PastWinners"
+    drawerType: "slide"
   }
 );
 
