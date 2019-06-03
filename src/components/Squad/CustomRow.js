@@ -101,7 +101,6 @@ const CustomRow = ({ country, code, members, rank, stats }) => {
     const [list, toggleList] = useState(false);
 
     const onPressButton = () => {
-        console.log('list', list);
         list ? toggleList(false) : toggleList(true);
     }
 
