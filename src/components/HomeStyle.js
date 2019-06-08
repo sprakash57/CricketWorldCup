@@ -4,18 +4,19 @@ export const s = StyleSheet.create({
     day_container: {
       flex:1, 
       width: 370, 
-      marginTop: 10,
+      marginTop: 5,
       marginLeft: 10,
       marginRight: 5,
       marginBottom: 10,
-      backgroundColor: 'white'
+      backgroundColor: 'white',
+      borderRadius: 5
     },
   
     day_container_text: {
       flex: 1, 
       flexDirection: 'row', 
       justifyContent: 'space-between',
-      padding: 10,
+      padding: 5,
     },
   
     day_match: {
@@ -47,8 +48,10 @@ export const s = StyleSheet.create({
     },
   
     schedule_text: {
-      fontSize: 20, 
+      fontSize: 18, 
       fontWeight: 'bold', 
+      flexWrap: 'nowrap',
+      width: 200,
       color: 'white',
       paddingLeft: 10
     },

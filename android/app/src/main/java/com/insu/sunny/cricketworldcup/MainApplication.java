@@ -1,4 +1,4 @@
-package com.cricketworldcup;
+package com.insu.sunny.cricketworldcup;
 
 import android.app.Application;
 

@@ -32,7 +32,7 @@ const ModalHTHSection = ({team, best}) => (
 );
 
 const HeadToHead = ({stats, display, closeModal}) => (
-    <Modal visible={display} animationType='slide'>
+    <Modal visible={display} onRequestClose={closeModal} animationType='fade'>
         {display && (
         <View style={s.modal_container}>
             <View style={s.modal_btn}>

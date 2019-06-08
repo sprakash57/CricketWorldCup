@@ -1,4 +1,4 @@
-package com.cricketworldcup;
+package com.insu.sunny.cricketworldcup;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

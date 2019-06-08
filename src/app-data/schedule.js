@@ -1182,7 +1182,7 @@ export const schedule = [
         "stadium": "Riverside Ground, Chester-le-Street",
         "team1": "Sri Lanka",
         "team2": "West Indies",
-        "date": "6 01",
+        "date": "6 1",
         "dateFormat": "July 1",
         "headToHead": {
             "t1": {

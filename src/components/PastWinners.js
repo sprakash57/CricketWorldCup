@@ -85,30 +85,31 @@ const s = StyleSheet.create({
     paddingBottom: 10
 },
 
-modal_innings_score: {
-  flex: 1,
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between'
-},
+  modal_innings_score: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
 
-modal_innings_score_text: {
-  fontSize: 17, 
-  fontWeight: '600', 
-  color: 'white', 
-  paddingLeft: 5
-},
+  modal_innings_score_text: {
+    fontSize: 14,
+    flex: 1, 
+    textAlign: 'center',
+    fontWeight: '600', 
+    color: 'white', 
+    paddingLeft: 4
+  },
 
-modal_innings_footer_text: {
-  fontSize: 15, 
-  color: 'white', 
-  paddingLeft: 8
-}
-
+  modal_innings_footer_text: {
+    fontSize: 15, 
+    color: 'white', 
+    paddingLeft: 8
+  }
 })
 
 const WinnerModal = ({content, display, closeModal}) => (
-    <Modal visible={display} animationType='fade'>
+    <Modal visible={display} onRequestClose={closeModal} animationType='fade'>
       <View style={s.modal_container}>
         <View style={s.modal_btn}>
           <TouchableWithoutFeedback onPress={closeModal}>
@@ -130,12 +131,12 @@ const WinnerModal = ({content, display, closeModal}) => (
             <Text style={{fontSize: 25,  flex: 0, flexWrap: 'nowrap', width: 300, textAlign: 'center',fontWeight: '800', color: 'white', textDecorationLine: 'underline'}}>Match Summary</Text>
           </View>
           <View style={s.modal_innings_score}>
-            <Text style={{fontSize: 14,flex: 1, textAlign: 'center',fontWeight: '600', color: 'white', paddingLeft: 4}}>{content.firstInnings}</Text>
-            <Text style={{fontSize: 14,flex:1, textAlign: 'center', fontWeight: '600', color: 'white', paddingRight: 4}}>{content.score1}</Text>
+            <Text style={s.modal_innings_score_text}>{content.firstInnings}</Text>
+            <Text style={s.modal_innings_score_text}>{content.score1}</Text>
           </View>
           <View style={s.modal_innings_score}>
-            <Text style={{fontSize: 14, flex:1, textAlign: 'center',fontWeight: '600', color: 'white', paddingLeft: 4}}>{content.secondInnings}</Text>
-            <Text style={{fontSize: 14, flex:1, textAlign: 'center',fontWeight: '600', color: 'white', paddingRight: 4}}>{content.score2}</Text>
+            <Text style={s.modal_innings_score_text}>{content.secondInnings}</Text>
+            <Text style={s.modal_innings_score_text}>{content.score2}</Text>
           </View>
           <View style={{flex: 2, alignItems: 'center', justifyContent: 'space-evenly'}}>  
             <Text style={{fontSize: 16, flex: 0, flexWrap: 'nowrap', width: 300, textAlign: 'center',fontWeight: 'bold', backgroundColor: 'lightgreen', paddingLeft: 5, paddingRight: 5}}>{content.Result}</Text>
