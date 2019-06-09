@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Linking, ToastAndroid } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import AppToolbar from './AppToolbar';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {openLink} from '../utils/index';
+import {LINKEDIN, GITHUB, WEB, MAIL, MOREAPPS} from '../utils/constants';
 
 const styles = StyleSheet.create({
   container : {
@@ -75,28 +77,12 @@ const styles = StyleSheet.create({
 
 export default class About extends React.Component {
 
-  handleLinkedIn = () => {
-    Linking.openURL('https://www.linkedin.com/in/sunny-prakash-3780ba49/').catch(err => console.log('An error occured', err)); 
-  }
-
-  handleGithub = () => {
-    Linking.openURL('https://github.com/sprakash57').catch(err => console.log('An error occured', err)); 
-  }
-
-  handlePortfolio = () => {
-    Linking.openURL('https:sprakash57.github.io/portfolio').catch(err => console.log('An error occured', err)); 
-  }
-
-  handleMoreApps = () => {
-    Linking.openURL('https://play.google.com/store/apps/developer?id=Sunny+Prakash').catch(err => console.log('An error occured', err)); 
-  }
-
-  handleMail = () => {
-    Linking.openURL('mailto:sunny.prakashgm@gmail.com').catch(err => ToastAndroid.showWithGravity('No email app found !', ToastAndroid.LONG, ToastAndroid.BOTTOM));
-  }
-
   handleDrawer = () => {
     this.props.navigation.toggleDrawer();
+  }
+
+  handleLink = (url) => {
+    openLink(url);
   }
 
   render() {
@@ -110,19 +96,20 @@ export default class About extends React.Component {
             <Text style={styles.name}>Sunny Prakash</Text>
             <Text style={styles.bio}>Web Developer | Android | BIT Mesra</Text>
             <View style={styles.social}>
-              <Icon name="logo-linkedin" size={45} color="orange" onPress={this.handleLinkedIn}/>
-              <Icon name="logo-github" size={45} color="orange" onPress={this.handleGithub}/>
-              <Icon name="logo-chrome" size={45} color="orange" onPress={this.handlePortfolio}/>
-              <Icon name="md-mail" size={45} color="orange" onPress={this.handleMail}/>
+              <Icon name="logo-linkedin" size={45} color="orange" onPress={() => this.handleLink(LINKEDIN)}/>
+              <Icon name="logo-github" size={45} color="orange" onPress={() => this.handleLink(GITHUB)}/>
+              <Icon name="logo-chrome" size={45} color="orange" onPress={() => this.handleLink(WEB)}/>
+              <Icon name="md-mail" size={45} color="orange" onPress={() => this.handleLink(MAIL)}/>
             </View>
           </View>
           <View style={styles.more_apps}>
             <Text style={styles.message}>"Liked my work?! connect with me by clicking any of the above icons. 
               Send me your feedbacks/suggestion which i need to work on. Checkout my other works link down below."
             </Text>
-            <Icon.Button name="logo-google" backgroundColor='#ea214d' size={20} onPress={this.handleMoreApps}>
+            <Icon.Button name="logo-google" backgroundColor='#ea214d' size={20} onPress={() => this.handleLink(MOREAPPS)}>
               <Text style={{flex:0, width: 100,flexWrap: 'nowrap',color: 'white', fontSize:16, fontWeight: 'bold'}}>More apps...</Text>
             </Icon.Button>
+            <Text style={{color: 'white'}}>App version 2.0</Text>
           </View>
         </View>
       </React.Fragment>

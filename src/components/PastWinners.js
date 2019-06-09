@@ -20,7 +20,7 @@ const s = StyleSheet.create({
 
   container_text: {
     color: 'black',
-    fontSize: 20,
+    fontSize: 18,
     flex: 0,
     width: 400,
     textAlign: 'center',

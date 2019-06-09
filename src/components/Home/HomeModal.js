@@ -11,9 +11,9 @@ const ModalHTHSection = ({team, best}) => (
         <View style={{flex: 1, flexDirection: 'row'}}>
             <View style={{flex:1, paddingLeft: 10}}>
                 <Text style={{color: 'white', fontSize: 17, fontWeight: 'bold', marginBottom: 10}}>Role</Text>
-                <Image source={require('../assets/bat.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
-                <Image source={require('../assets/ball.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
-                <Image source={require('../assets/all.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
+                <Image source={require('../../assets/bat.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
+                <Image source={require('../../assets/ball.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
+                <Image source={require('../../assets/all.png')} style={{width: 20, height: 20, marginBottom: 12}}/>
             </View>
             <View style={{flex:2, alignItems: 'flex-start'}}>
                 <Text style={{color: 'white', flex: 0, width: 200, fontSize: 17, fontWeight: 'bold', marginBottom: 10}}>Player</Text>
@@ -42,7 +42,7 @@ const HeadToHead = ({stats, display, closeModal}) => (
                 <Text style={s.modal_btn_text} onPress={closeModal}>Back</Text>
             </View>
             <View style={s.modal_headers}>
-                <Image source={require('../assets/hth.png')} style={s.modal_headers_image}/>
+                <Image source={require('../../assets/hth.png')} style={s.modal_headers_image}/>
                 <Text style={s.modal_headers_text}>Head to Head</Text>
             </View>
             <View style={s.modal_stats}>
@@ -72,7 +72,7 @@ const HeadToHead = ({stats, display, closeModal}) => (
                 </View>
             </View>
             <View style={s.modal_headers}>
-                <Image source={require('../assets/mvp.png')} style={s.modal_headers_image}/>
+                <Image source={require('../../assets/mvp.png')} style={s.modal_headers_image}/>
                 <Text style={s.modal_headers_text}>Star players</Text>
             </View>
             <ModalHTHSection 

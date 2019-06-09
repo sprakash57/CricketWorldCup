@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, Linking} from 'react-native';
 import {NavigationActions} from 'react-navigation';
 import Icon from 'react-native-vector-icons/AntDesign';
+import {openLink} from '../utils/index';
+import { ESPN } from '../utils/constants';
 
 const s = StyleSheet.create({
     drawer_txt: {
@@ -12,6 +14,13 @@ const s = StyleSheet.create({
     }
 });
 
+const DrawerItem = ({icon, top, nav, content}) => (
+    <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start', paddingLeft: 20, top:top}}>
+        <Icon name={icon} size={20} color='#ea214d'/>
+        <Text onPress={nav} style={s.drawer_txt}>{content}</Text>
+    </View>
+);
+
 export default class DrawerLayout extends React.Component {
     navigateToScreen = (route) => (
         () => {
@@ -21,6 +30,8 @@ export default class DrawerLayout extends React.Component {
             this.props.navigation.dispatch(navigateAction);
         }
     )
+
+    handleLink = (url) => openLink(url)
     
     render() {
         return (
@@ -29,27 +40,13 @@ export default class DrawerLayout extends React.Component {
                     <Image source={require('../assets/cup.jpg')} style={{flex: 1, width: undefined, height: undefined}} />
                 </View>
                 <View style={{flex: 4, backgroundColor: "#272a89",}}>
-                    <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start', paddingLeft: 20}}>
-                        <Icon name='calendar' size={20} color='#ea214d'/>
-                        <Text onPress={this.navigateToScreen('Home')} style={s.drawer_txt}>Fixtures</Text>
-                    </View>
-                    <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start', paddingLeft: 20, position: 'relative', top: -33}}>
-                        <Icon name='team' size={20} color='#ea214d'/>
-                        <Text onPress={this.navigateToScreen('Team')} style={s.drawer_txt}>Teams</Text>
-                    </View>
-                    <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start', paddingLeft: 20, position: 'relative', top: -66}}>
-                        <Icon name='profile' size={20} color='#ea214d'/>
-                        <Text onPress={this.navigateToScreen('PointsTable')} style={s.drawer_txt}>Points table</Text>
-                    </View>
-                    <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start', paddingLeft: 20, position: 'relative', top: -99}}>
-                        <Icon name='Trophy' size={20} color='#ea214d'/>
-                        <Text onPress={this.navigateToScreen('PastWinners')} style={s.drawer_txt}>Past winners</Text>
-                    </View>
-                </View>
-                <View style={{flex: 1, backgroundColor:'#272a89', flexDirection: 'row', alignItems: 'flex-start', paddingLeft: 20, alignItems: 'center'}}>
-                    <Icon name='infocirlceo' size={20} color='#ea214d'/>
-                    <Text onPress={this.navigateToScreen('About')} style={s.drawer_txt}>About</Text>
-                </View>
+                    <DrawerItem icon='calendar' nav={this.navigateToScreen('Home')} content='Fixtures' top={0}/>
+                    <DrawerItem icon='team' nav={this.navigateToScreen('Team')} content='Teams' top={-30}/>
+                    <DrawerItem icon='profile' nav={this.navigateToScreen('PointsTable')} content='Points Table' top={-60}/>
+                    <DrawerItem icon='Trophy' nav={this.navigateToScreen('PastWinners')} content='Past winners' top={-90}/>
+                    <DrawerItem icon='play' nav={() => this.handleLink(ESPN)} content='Live score' top={-120}/>
+                    <DrawerItem icon='infocirlceo' nav={this.navigateToScreen('About')} content='About' top={-150}/>
+                </View> 
             </View>
         );
     }

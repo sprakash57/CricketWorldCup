@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StatusBar, StyleSheet, ToolbarAndroid, ToastAndroid, Share, Linking } from 'react-native';
+import { View, StyleSheet, ToastAndroid, Share, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const styles = StyleSheet.create({
@@ -34,7 +34,6 @@ const handleClicks = (position) => {
 
 const AppToolbar = (props) => (
   <View>
-    <StatusBar backgroundColor="#232882" barStyle="light-content"/>
     <Icon.ToolbarAndroid style={styles.toolbar} title="Cricket World Cup'19" titleColor="white"
       navIconName="md-menu"
       actions={[

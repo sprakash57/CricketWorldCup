@@ -6,6 +6,7 @@ export const schedule = [
         "team2": "South Africa",
         "date": "4 30",
         "dateFormat": 'May 30',
+        "result": "England won by 104 runs",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 5,
@@ -37,6 +38,7 @@ export const schedule = [
         "team2": "Pakistan",
         "date": "4 31",
         "dateFormat": "May 31",
+        "result": "West Indies won by 7 wickets",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 2,
@@ -68,6 +70,7 @@ export const schedule = [
         "team2": "Sri Lanka",
         "date": "5 1",
         "dateFormat": "June 1",
+        "result": "New Zealand won by 10 wickets",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 4,
@@ -99,6 +102,7 @@ export const schedule = [
         "team2": "Australia",
         "date": "5 1",
         "dateFormat": "June 1",
+        "result": "Australia won by 7 wickets",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 3,
@@ -130,6 +134,7 @@ export const schedule = [
         "team2": "Bangladesh",
         "date": "5 2",
         "dateFormat": "June 2",
+        "result": "Bangladesh won by 21 runs",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 5,
@@ -161,6 +166,7 @@ export const schedule = [
         "team2": "Pakistan",
         "date": "5 3",
         "dateFormat": "June 3",
+        "result": "Pakistan won by 14 runs",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 5,
@@ -192,6 +198,7 @@ export const schedule = [
         "team2": "Sri Lanka",
         "date": "5 4",
         "dateFormat": "June 4",
+        "result": "Sri Lanka won by 34 runs (D/L method)",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 3,
@@ -223,6 +230,7 @@ export const schedule = [
         "team2": "India",
         "date": "5 5",
         "dateFormat": "June 5",
+        "result": "India won by 6 wickets",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 5,
@@ -254,6 +262,7 @@ export const schedule = [
         "team2": "New Zealand",
         "date": "5 5",
         "dateFormat": "June 5",
+        "result": "New Zealand won by 2 wickets",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 4,
@@ -285,6 +294,7 @@ export const schedule = [
         "team2": "West Indies",
         "date": "5 6",
         "dateFormat": "June 6",
+        "result": "Australia won by 15 runs",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 5,
@@ -316,6 +326,7 @@ export const schedule = [
         "team2": "Sri Lanka",
         "date": "5 7",
         "dateFormat": "June 7",
+        "result": "Match abandoned",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 0,
@@ -347,6 +358,7 @@ export const schedule = [
         "team2": "Bangladesh",
         "date": "5 8",
         "dateFormat": "June 8",
+        "result": "England won by 106 runs",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 5,
@@ -378,6 +390,7 @@ export const schedule = [
         "team2": "New Zealand",
         "date": "5 8",
         "dateFormat": "June 8",
+        "result": "New Zealand won by 7 wickets",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 3,

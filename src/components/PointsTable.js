@@ -44,8 +44,11 @@ const RankTable = ({content}) => {
 
 export default class PointsTable extends React.Component {
 
-  state = {
-    table
+  constructor(props) {
+    super(props);
+    this.state = {
+      table: this.props.screenProps.table
+    }
   }
 
   handleDrawer = () => {

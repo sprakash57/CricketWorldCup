@@ -1,17 +1,16 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, FlatList, Picker } from 'react-native';
-import AppToolbar from './AppToolbar';
-import {schedule} from '../app-data/schedule';
-import Flag from 'react-native-round-flags';
-import HomeModal from './HomeModal';
-import {s} from './HomeStyle';
+import { View, Text, TouchableOpacity, FlatList, Picker } from 'react-native';
+import AppToolbar from '../AppToolbar';
+import HomeModal from '../Home/HomeModal';
+import {s} from '../Home/HomeStyle';
+import {flagExtract} from '../../utils/index';
 
 const ScheduledDay = ({day, count}) => <Text style={s.schedule_text}>{day} <Text>&bull;</Text> {count}</Text>;
 
-const MatchCard = ({content, handleModal}) => (
+const MatchCard = ({content, handleModal, flag}) => (
   <View style={s.day_container}>
     <View style={s.day_container_text}>
-      <View style={{elevation: 2, backgroundColor: '#ea214d', padding: 3, borderRadius: 6, height: 25}}>
+      <View style={{elevation: 2, backgroundColor: '#ea214d', padding: 3, borderRadius: 5, height: 25}}>
         <Text style={{color: 'white'}}>{content.dateFormat}</Text>
       </View>
       <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
@@ -36,57 +35,39 @@ const MatchCard = ({content, handleModal}) => (
       <Text style={{fontSize: 16, fontWeight: 'bold', fontFamily: 'san-serif'}}>{content.stadium}</Text>
     </View>
     {
-      (content.team1 === 'TBD' || content.team2 === 'TBD') ?
-        (
-          <TouchableOpacity style={{backgroundColor: '#d3d3d3', borderTopColor: '#232882', borderTopWidth: 1.5}}>
-            <Text style={{color: 'black', fontWeight: 'bold', textAlign: 'center'}}>Compare squads</Text>
+      flag ? (
+          <TouchableOpacity style={{backgroundColor: 'green', borderTopColor: '#232882', borderTopWidth: 1.5}}>
+            <Text style={{color: 'white', fontWeight: 'bold', textAlign: 'center'}}>{content.result || flag}</Text>
           </TouchableOpacity>
-        )
-        : (
+      ) : (
+        parseInt(content.match) > 45 ? (
+          <TouchableOpacity style={{backgroundColor: '#d3d3d3', borderTopColor: '#232882', borderTopWidth: 1.5}}>
+            <Text style={{fontWeight: 'bold', textAlign: 'center'}}>Yet to be decided</Text>
+          </TouchableOpacity>
+        ) : (
           <TouchableOpacity onPress={() => handleModal(content)} style={{backgroundColor: '#ea214d', borderTopColor: '#232882', borderTopWidth: 1.5}}>
             <Text style={{color: 'white', fontWeight: 'bold', textAlign: 'center'}}>Compare squads</Text>
           </TouchableOpacity>
         )
+      )
     }
   </View>
 );
 
-const flagExtract = (team) => {
-  switch(team) {
-    case 'Afghanistan':
-      return <Flag code={'AF'} style={s.photo}/>
-    case 'Australia':
-      return <Flag code={'AU'} style={s.photo}/>
-    case 'Bangladesh':
-      return <Flag code={'BD'} style={s.photo}/>
-    case 'England':
-      return <Flag code={'GB'} style={s.photo}/>
-    case 'India':
-      return <Flag code={'IN'} style={s.photo}/>
-    case 'New Zealand':
-      return <Flag code={'NZ'} style={s.photo}/>
-    case 'Pakistan':
-      return <Flag code={'PK'} style={s.photo}/>
-    case 'South Africa':
-      return <Flag code={'ZA'} style={s.photo}/>
-    case 'Sri Lanka':
-      return <Flag code={'LK'} style={s.photo}/>
-    case 'West Indies':
-      return <Image source={require('../assets/WI.png')} style={s.photo}/>
-  }
-}
-
 export default class Home extends React.Component {
 
-  state = {
-    schedule,
-    modalVisible: false,
-    selectedItem: '',
-    filteredItem: '',
-    today: [],
-    upcoming: [],
-    past: [],
-    selectedTeam: 'All'
+  constructor(props) {
+    super(props);
+    this.state = {
+      schedule: this.props.screenProps.schedule,
+      modalVisible: false,
+      selectedItem: '',
+      filteredItem: '',
+      today: [],
+      upcoming: [],
+      past: [],
+      selectedTeam: 'All'
+    }
   }
 
   handleDrawer = () => this.props.navigation.toggleDrawer();
@@ -110,15 +91,6 @@ export default class Home extends React.Component {
     this.setState({filteredItem: more});
     return more;
   }
-
-  // handleSquad = () => {
-  //   fetch('https://api.myjson.com/bins/ygyoo')
-  //     .then(response => response.json())
-  //     .then(data => console.log(data));
-  //   fetch('https://api.jsonbin.io/b/5ce6c9d1bc2a75194e4cf6a9/latest', {headers:{"secret-key":"$2a$10$A2yuCQpLPlo4/fAMWpmtQu3oW1Lo1cfNgxcZPDGnSSO9nBOfCGgLe"}})
-  //         .then(resp => resp.json())
-  //         .then(data => console.log(data))
-  // }
 
   handleModalVisibility = (item) => {
     this.state.modalVisible ? 
@@ -168,7 +140,7 @@ export default class Home extends React.Component {
           </View>
           <View style={{flex: 1}}>
             <ScheduledDay day='Upcoming' count={upcomingGames.length}/>
-            <View style={{flex:0,flexDirection: 'row', position: 'absolute', top: -14, left: 300}}>
+            <View style={{flex:0,flexDirection: 'row', position: 'absolute', top: -14, left: 320}}>
               <Text style={{color: 'white', textAlignVertical: 'center'}}>{this.state.selectedTeam}</Text>
               <Picker selectedValue={this.state.selectedTeam} style={{width: 50}} onValueChange={this.handleSelectedTeam}>
                 <Picker.Item label='All' value='All' />
@@ -196,7 +168,7 @@ export default class Home extends React.Component {
               showsHorizontalScrollIndicator={false}
               horizontal={true}
               data={this.state.past}
-              renderItem={({item}) => <MatchCard key={parseInt(item.match)} content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
+              renderItem={({item}) => <MatchCard key={parseInt(item.match)} flag='results will be out soon' content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
           </View> 
           <HomeModal 
             stats={this.state.selectedItem}

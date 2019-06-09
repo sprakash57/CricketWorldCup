@@ -8,8 +8,7 @@ export const s = StyleSheet.create({
       marginLeft: 10,
       marginRight: 5,
       marginBottom: 10,
-      backgroundColor: 'white',
-      borderRadius: 5
+      backgroundColor: 'white'
     },
   
     day_container_text: {
@@ -55,17 +54,11 @@ export const s = StyleSheet.create({
       color: 'white',
       paddingLeft: 10
     },
-  
-    photo: {
-      width: 70,
-      height: 70  
-    },
     modal_container: {
       flex: 1, 
       justifyContent: 'flex-start', 
       alignItems: 'flex-start'
     },
-  
     modal_btn:{
       position: 'relative',
       top: 12,
@@ -75,20 +68,17 @@ export const s = StyleSheet.create({
       marginBottom: 30,
   
     },
-  
     modal_btn_text: {
       fontSize: 20, 
       width: 70,
       color:'#232882', 
       fontWeight: 'bold'
     },
-  
     modal_btn_icon: {
       position: 'relative', 
       top: 3, 
       marginRight: 10,
     },
-  
     modal_headers: {
       backgroundColor: '#ea214d', 
       display: 'flex',
@@ -100,7 +90,6 @@ export const s = StyleSheet.create({
       borderTopRightRadius: 20, 
       elevation: 4
     },
-  
     modal_headers_text: {
       fontSize: 22, 
       color: 'white', 
@@ -113,7 +102,6 @@ export const s = StyleSheet.create({
       paddingBottom: 10,
       paddingLeft: 20
     },
-  
     modal_headers_image: {
       width: 20, 
       height: 20, 
@@ -121,7 +109,6 @@ export const s = StyleSheet.create({
       top: 17,
       left: 5
     },
-  
     modal_stats: {
       flex: 1, 
       flexDirection: 'row', 
@@ -130,5 +117,4 @@ export const s = StyleSheet.create({
       padding: 5, 
       marginBottom: 15,
     }
-  
   });
