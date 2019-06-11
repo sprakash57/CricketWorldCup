@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, ToastAndroid, Share, Linking } from 'react-native';
+import { View, StyleSheet, Share } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {openLink} from '../utils/index';
+import {RATE, MOREAPPS} from '../utils/constants';
 
 const styles = StyleSheet.create({
   toolbar: {
@@ -24,11 +26,9 @@ const handleClicks = (position) => {
   if (position === 0) {
     handleShare();
   } else if (position === 1) {
-    Linking.openURL('https://play.google.com/store/apps/details?id=com.insu.sunny.cricketworldcup')
-           .catch(err => ToastAndroid.showWithGravity('Check your internet', ToastAndroid.SHORT, ToastAndroid.BOTTOM));
+    openLink(RATE);
   } else {
-    Linking.openURL('https://play.google.com/store/apps/developer?id=Sunny+Prakash')
-           .catch(err => ToastAndroid.showWithGravity('Check your internet', ToastAndroid.SHORT, ToastAndroid.BOTTOM));
+    openLink(MOREAPPS);
   }
 }
 

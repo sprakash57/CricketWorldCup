@@ -7,7 +7,7 @@ export const s = StyleSheet.create({
       marginTop: 5,
       marginLeft: 10,
       marginRight: 5,
-      marginBottom: 10,
+      marginBottom: 5,
       backgroundColor: 'white'
     },
   

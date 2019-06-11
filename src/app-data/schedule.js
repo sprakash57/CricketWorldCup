@@ -5,7 +5,7 @@ export const schedule = [
         "team1": "England",
         "team2": "South Africa",
         "date": "4 30",
-        "dateFormat": 'May 30',
+        "dateFormat": "May 30",
         "result": "England won by 104 runs",
         "headToHead": {
             "t1": {
@@ -30,7 +30,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "2",
         "stadium": "Trent Bridge, Nottingham",
@@ -62,7 +61,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "3",
         "stadium": "Sophia Gardens, Cardiff",
@@ -94,7 +92,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "4",
         "stadium": "County Ground, Bristol",
@@ -126,7 +123,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "5",
         "stadium": "Kennington Oval, London",
@@ -158,7 +154,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "6",
         "stadium": "Trent Bridge, Nottingham",
@@ -190,7 +185,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "7",
         "stadium": "Sophia Gardens, Cardiff",
@@ -222,7 +216,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "8",
         "stadium": "The Rose Bowl, Southampton",
@@ -254,7 +247,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "9",
         "stadium": "Kennington Oval, London",
@@ -286,7 +278,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "10",
         "stadium": "Trent Bridge, Nottingham",
@@ -318,7 +309,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "11",
         "stadium": "County Ground, Bristol",
@@ -350,7 +340,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "12",
         "stadium": "Sophia Gardens, Cardiff",
@@ -382,7 +371,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "13",
         "stadium": "The Cooper Associates County Ground, Taunton",
@@ -414,7 +402,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "14",
         "stadium": "Kennington Oval, London",
@@ -422,6 +409,7 @@ export const schedule = [
         "team2": "Australia",
         "date": "5 9",
         "dateFormat": "June 9",
+        "result": "India won by 36 runs",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 2,
@@ -445,7 +433,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "15",
         "stadium": "The Rose Bowl, Southampton",
@@ -453,6 +440,7 @@ export const schedule = [
         "team2": "West Indies",
         "date": "5 10",
         "dateFormat": "June 10",
+        "result": "No result",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 5,
@@ -476,7 +464,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "16",
         "stadium": "County Ground, Bristol",
@@ -484,6 +471,7 @@ export const schedule = [
         "team2": "Sri Lanka",
         "date": "5 11",
         "dateFormat": "June 11",
+        "result": "Match abandoned",
         "headToHead": {
             "t1": {
                 "Last 5 ODIs": 4,
@@ -507,7 +495,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "17",
         "stadium": "The Cooper Associates County Ground, Taunton",
@@ -538,7 +525,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "18",
         "stadium": "Trent Bridge, Nottingham",
@@ -569,7 +555,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "19",
         "stadium": "The Rose Bowl, Southampton",
@@ -600,7 +585,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "20",
         "stadium": "Kennington Oval, London",
@@ -631,7 +615,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "21",
         "stadium": "Sophia Gardens, Cardiff",
@@ -662,7 +645,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "22",
         "stadium": "Emirates Old Trafford, Manchester",
@@ -693,7 +675,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "23",
         "stadium": "The Cooper Associates County Ground, Taunton",
@@ -724,7 +705,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "24",
         "stadium": "Emirates Old Trafford, Manchester",
@@ -755,7 +735,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "25",
         "stadium": "Edgbaston, Birmingham",
@@ -786,7 +765,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "26",
         "stadium": "Trent Bridge, Nottingham",
@@ -817,7 +795,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "27",
         "stadium": "Headingley, Leeds",
@@ -848,7 +825,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "28",
         "stadium": "The Rose Bowl, Southampton",
@@ -879,7 +855,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "29",
         "stadium": "Emirates Old Trafford, Manchester",
@@ -910,7 +885,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "30",
         "stadium": "Lord's, London",
@@ -941,7 +915,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "31",
         "stadium": "The Rose Bowl, Southampton",
@@ -972,7 +945,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "32",
         "stadium": "Lord's, London",
@@ -1003,7 +975,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "33",
         "stadium": "Edgbaston, Birmingham",
@@ -1034,7 +1005,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "34",
         "stadium": "Emirates Old Trafford, Manchester",
@@ -1065,7 +1035,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "35",
         "stadium": "Riverside Ground, Chester-le-Street",
@@ -1096,7 +1065,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "36",
         "stadium": "Headingley, Leeds",
@@ -1127,7 +1095,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "37",
         "stadium": "Lord's, London",
@@ -1158,7 +1125,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "38",
         "stadium": "Edgbaston, Birmingham",
@@ -1189,7 +1155,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "39",
         "stadium": "Riverside Ground, Chester-le-Street",
@@ -1220,7 +1185,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "40",
         "stadium": "Edgbaston, Birmingham",
@@ -1251,7 +1215,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "41",
         "stadium": "Riverside Ground, Chester-le-Street",
@@ -1282,7 +1245,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "42",
         "stadium": "Riverside Ground, Chester-le-Street",
@@ -1313,7 +1275,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "43",
         "stadium": "Lord's, London",
@@ -1344,7 +1305,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "44",
         "stadium": "Headingley, Leeds",
@@ -1375,7 +1335,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "45",
         "stadium": "Emirates Old Trafford, Manchester",
@@ -1406,7 +1365,6 @@ export const schedule = [
             }
         }
     },
-
     {
         "match": "46",
         "stadium": "Emirates Old Trafford, Manchester",
@@ -1415,11 +1373,10 @@ export const schedule = [
         "date": "6 9",
         "dateFormat": "July 9",
         "headToHead": {
-            't1': '',
-            't2': ''
+            "t1": "",
+            "t2": ""
         }
     },
-
     {
         "match": "47",
         "stadium": "Edgbaston, Birmingham",
@@ -1428,11 +1385,10 @@ export const schedule = [
         "date": "6 11",
         "dateFormat": "July 11",
         "headToHead": {
-            't1': '',
-            't2': ''
+            "t1": "",
+            "t2": ""
         }
     },
-
     {
         "match": "48",
         "stadium": "Lord's, London",
@@ -1441,8 +1397,8 @@ export const schedule = [
         "date": "6 14",
         "dateFormat": "July 14",
         "headToHead": {
-            't1': '',
-            't2': ''
+            "t1": "",
+            "t2": ""
         }
-    },
+    }
 ]

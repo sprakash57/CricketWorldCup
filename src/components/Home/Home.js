@@ -10,7 +10,7 @@ const ScheduledDay = ({day, count}) => <Text style={s.schedule_text}>{day} <Text
 const MatchCard = ({content, handleModal, flag}) => (
   <View style={s.day_container}>
     <View style={s.day_container_text}>
-      <View style={{elevation: 2, backgroundColor: '#ea214d', padding: 3, borderRadius: 5, height: 25}}>
+      <View style={{elevation: 6, backgroundColor: '#ea214d', padding: 3, borderRadius: 5, height: 25}}>
         <Text style={{color: 'white'}}>{content.dateFormat}</Text>
       </View>
       <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
@@ -32,20 +32,20 @@ const MatchCard = ({content, handleModal, flag}) => (
       </View>
     </View>
     <View style={{flex: 1, alignItems: 'center'}}>
-      <Text style={{fontSize: 16, fontWeight: 'bold', fontFamily: 'san-serif'}}>{content.stadium}</Text>
+      <Text style={{fontSize: 15, fontWeight: 'bold', fontFamily: 'san-serif'}}>{content.stadium}</Text>
     </View>
     {
       flag ? (
-          <TouchableOpacity style={{backgroundColor: 'green', borderTopColor: '#232882', borderTopWidth: 1.5}}>
+          <View style={{backgroundColor: 'green', borderTopColor: '#232882', borderTopWidth: 1.5}}>
             <Text style={{color: 'white', fontWeight: 'bold', textAlign: 'center'}}>{content.result || flag}</Text>
-          </TouchableOpacity>
+          </View>
       ) : (
         parseInt(content.match) > 45 ? (
           <TouchableOpacity style={{backgroundColor: '#d3d3d3', borderTopColor: '#232882', borderTopWidth: 1.5}}>
             <Text style={{fontWeight: 'bold', textAlign: 'center'}}>Yet to be decided</Text>
           </TouchableOpacity>
         ) : (
-          <TouchableOpacity onPress={() => handleModal(content)} style={{backgroundColor: '#ea214d', borderTopColor: '#232882', borderTopWidth: 1.5}}>
+          <TouchableOpacity onPress={() => handleModal(content)} style={{backgroundColor: '#ea214d', borderTopColor: '#232882', borderTopWidth: 1.8}}>
             <Text style={{color: 'white', fontWeight: 'bold', textAlign: 'center'}}>Compare squads</Text>
           </TouchableOpacity>
         )
@@ -62,7 +62,8 @@ export default class Home extends React.Component {
       schedule: this.props.screenProps.schedule,
       modalVisible: false,
       selectedItem: '',
-      filteredItem: '',
+      filterUpcoming: '',
+      filterPast: '',
       today: [],
       upcoming: [],
       past: [],
@@ -77,19 +78,26 @@ export default class Home extends React.Component {
   }
 
   handleFilterTeam = () => {
-    let more;
+    let upGames, pastGames;
     if ( this.state.selectedTeam === 'All') {
-      more = this.state.upcoming;
+      upGames = this.state.upcoming;
+      pastGames = this.state.past;
     } else {
-      more = this.state.upcoming.filter((item) => {
+      upGames = this.state.upcoming.filter((item) => {
+        if (item.team1 === this.state.selectedTeam || item.team2 === this.state.selectedTeam) {
+          return true;
+        }
+        return false;
+      });
+      pastGames = this.state.past.filter((item) => {
         if (item.team1 === this.state.selectedTeam || item.team2 === this.state.selectedTeam) {
           return true;
         }
         return false;
       });
     }
-    this.setState({filteredItem: more});
-    return more;
+    this.setState({filterUpcoming: upGames, filterPast: pastGames});
+    return upGames;
   }
 
   handleModalVisibility = (item) => {
@@ -123,7 +131,8 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const upcomingGames = this.state.filteredItem || this.state.upcoming;
+    const upcomingGames = this.state.filterUpcoming || this.state.upcoming;
+    const pastGames = this.state.filterPast || this.state.past;
     return (
       <React.Fragment>
         <AppToolbar toggleDrawer={this.handleDrawer}/>
@@ -163,11 +172,11 @@ export default class Home extends React.Component {
               renderItem={({item}) => <MatchCard key={parseInt(item.match)} content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
           </View>
           <View style={{flex: 1}}>
-            <ScheduledDay day='Past' count={this.state.past.length}/>
+            <ScheduledDay day='Past' count={pastGames.length}/>
             <FlatList 
               showsHorizontalScrollIndicator={false}
               horizontal={true}
-              data={this.state.past}
+              data={pastGames}
               renderItem={({item}) => <MatchCard key={parseInt(item.match)} flag='results will be out soon' content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
           </View> 
           <HomeModal 

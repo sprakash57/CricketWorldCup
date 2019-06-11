@@ -47,7 +47,7 @@ export default class PointsTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      table: this.props.screenProps.table
+      table: this.props.screenProps.table || table
     }
   }
 
@@ -62,7 +62,7 @@ export default class PointsTable extends React.Component {
         <View style={{flex: 1,}}>
           <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-around', position: 'relative', top: 20}}>
             <Text style={{fontSize: 12}}>Teams</Text>
-            <Text style={{fontSize: 12}}>Matches</Text>
+            <Text style={{fontSize: 12}}>PLD</Text>
             <Text style={{fontSize: 12}}>Won</Text> 
             <Text style={{fontSize: 12}}>Lost</Text>
             <Text style={{fontSize: 12}}>Tie</Text>

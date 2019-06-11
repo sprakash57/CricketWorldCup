@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, Linking} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {NavigationActions} from 'react-navigation';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {openLink} from '../utils/index';
@@ -8,9 +8,10 @@ import { ESPN } from '../utils/constants';
 const s = StyleSheet.create({
     drawer_txt: {
         color: 'white', 
-        fontSize: 20, 
-        marginLeft: 20, 
-        lineHeight: 24
+        fontSize: 17,
+        marginLeft: 20,
+        position: 'relative',
+        top: -2
     }
 });
 
