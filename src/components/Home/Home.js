@@ -10,13 +10,13 @@ const ScheduledDay = ({day, count}) => <Text style={s.schedule_text}>{day} <Text
 const MatchCard = ({content, handleModal, flag}) => (
   <View style={s.day_container}>
     <View style={s.day_container_text}>
-      <View style={{elevation: 6, backgroundColor: '#ea214d', padding: 3, borderRadius: 5, height: 25}}>
+      <View style={{elevation: 2, backgroundColor: '#ea214d',paddingLeft:5, paddingRight: 3, height: 25}}>
         <Text style={{color: 'white'}}>{content.dateFormat}</Text>
       </View>
       <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
         <Text style={{fontSize: 18, position: 'relative', right: 6, fontWeight: 'bold'}}>Match </Text>
         <View style={s.day_match}>
-          <Text style={{color: 'white'}}>{content.match}</Text>
+          <Text style={{color: 'white', textAlignVertical: 'center'}}>{content.match}</Text>
         </View>
       </View>
     </View>

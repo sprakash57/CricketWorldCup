@@ -32,12 +32,12 @@ const RankTable = ({content}) => {
   return  (
     <View style={s.container}>
       {flagExtractor(content.country)}
-      <Text style={{fontSize: 15}}>{content.matches}</Text>
-      <Text style={{fontSize: 15}}>{content.won}</Text>
-      <Text style={{fontSize: 15}}>{content.lost}</Text>
-      <Text style={{fontSize: 15}}>{content.tie}</Text>
-      <Text style={{fontSize: 15}}>{content.nr}</Text>
-      <Text style={{fontSize: 15}}>{content.pt}</Text>
+      <Text style={{fontSize: 15, fontWeight: 'bold'}}>{content.matches}</Text>
+      <Text style={{fontSize: 15, fontWeight: 'bold'}}>{content.won}</Text>
+      <Text style={{fontSize: 15, fontWeight: 'bold'}}>{content.lost}</Text>
+      <Text style={{fontSize: 15, fontWeight: 'bold'}}>{content.tie}</Text>
+      <Text style={{fontSize: 15, fontWeight: 'bold'}}>{content.nr}</Text>
+      <Text style={{fontSize: 15, fontWeight: 'bold'}}>{content.pt}</Text>
     </View>
   );
 }
@@ -59,7 +59,7 @@ export default class PointsTable extends React.Component {
     return (
       <React.Fragment>
         <AppToolbar toggleDrawer={this.handleDrawer}/>
-        <View style={{flex: 1,}}>
+        <View style={{flex: 1}}>
           <View style={{flex: 1, flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-around', position: 'relative', top: 20}}>
             <Text style={{fontSize: 12}}>Teams</Text>
             <Text style={{fontSize: 12}}>PLD</Text>

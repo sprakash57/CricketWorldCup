@@ -15,12 +15,12 @@ export const s = StyleSheet.create({
       flex: 1, 
       flexDirection: 'row', 
       justifyContent: 'space-between',
-      padding: 5,
+      paddingTop: 5,
+      marginRight: 5
     },
   
     day_match: {
       backgroundColor: '#ea214d',
-      fontSize: 16,
       borderRadius: 15,
       alignItems: 'center',
       width: 25,

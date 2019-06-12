@@ -38,7 +38,7 @@ class App extends React.Component {
     if (isLoading) {
       return (
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center',backgroundColor: '#232882'}}>
-          <Image source={require('./src/assets/spinner.gif')} style={{width: 120, height: 120}}/>
+          <Image source={require('./src/assets/spinner.gif')} style={{width: 110, height: 110}}/>
           <Text style={{flex:0,width: 400, fontFamily: 'san-serif',textAlign: 'center',fontSize: 30, fontWeight: 'bold', color: 'white'}}>Cricket World Cup'19</Text>
           <Text style={{fontSize: 16,color: 'white', position: 'relative', top: 290}}>Loading...</Text>
         </View>
