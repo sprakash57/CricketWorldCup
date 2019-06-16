@@ -8,6 +8,7 @@ export const s = StyleSheet.create({
       marginLeft: 10,
       marginRight: 5,
       marginBottom: 5,
+      borderRadius: 8,
       backgroundColor: 'white'
     },
   
@@ -18,16 +19,6 @@ export const s = StyleSheet.create({
       paddingTop: 5,
       marginRight: 5
     },
-  
-    day_match: {
-      backgroundColor: '#ea214d',
-      borderRadius: 15,
-      alignItems: 'center',
-      width: 25,
-      height: 25,
-      elevation: 6
-    },
-  
     day_flag: {
       flex: 3, 
       flexDirection: 'row', 
@@ -61,12 +52,12 @@ export const s = StyleSheet.create({
     },
     modal_btn:{
       position: 'relative',
+      alignSelf: 'flex-start',
       top: 12,
       left: 10,
       display: 'flex',
       flexDirection: 'row',
       marginBottom: 30,
-  
     },
     modal_btn_text: {
       fontSize: 20, 

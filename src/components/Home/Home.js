@@ -1,22 +1,23 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, FlatList, Picker } from 'react-native';
 import AppToolbar from '../AppToolbar';
-import HomeModal from '../Home/HomeModal';
 import {s} from '../Home/HomeStyle';
 import {flagExtract} from '../../utils/index';
+import ScoreModal from '../ScoreModal';
+import HomeModal from './HomeModal';
 
 const ScheduledDay = ({day, count}) => <Text style={s.schedule_text}>{day} <Text>&bull;</Text> {count}</Text>;
 
-const MatchCard = ({content, handleModal, flag}) => (
+const MatchCard = ({content, handleModal,flag, cardColor ,txtColor}) => (
   <View style={s.day_container}>
     <View style={s.day_container_text}>
-      <View style={{elevation: 2, backgroundColor: '#ea214d',paddingLeft:5, paddingRight: 3, height: 25}}>
-        <Text style={{color: 'white'}}>{content.dateFormat}</Text>
+      <View style={{elevation: 2, backgroundColor: cardColor,paddingLeft:5, paddingRight: 3, height: 25}}>
+        <Text style={{color: txtColor}}>{content.dateFormat}</Text>
       </View>
       <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
         <Text style={{fontSize: 18, position: 'relative', right: 6, fontWeight: 'bold'}}>Match </Text>
-        <View style={s.day_match}>
-          <Text style={{color: 'white', textAlignVertical: 'center'}}>{content.match}</Text>
+        <View style={{backgroundColor: cardColor, borderRadius: 15,alignItems: 'center',width: 25,height: 25,elevation: 6}}>
+          <Text style={{color: txtColor}}>{content.match}</Text>
         </View>
       </View>
     </View>
@@ -36,17 +37,22 @@ const MatchCard = ({content, handleModal, flag}) => (
     </View>
     {
       flag ? (
-          <View style={{backgroundColor: 'green', borderTopColor: '#232882', borderTopWidth: 1.5}}>
-            <Text style={{color: 'white', fontWeight: 'bold', textAlign: 'center'}}>{content.result || flag}</Text>
-          </View>
-      ) : (
-        parseInt(content.match) > 45 ? (
-          <TouchableOpacity style={{backgroundColor: '#d3d3d3', borderTopColor: '#232882', borderTopWidth: 1.5}}>
-            <Text style={{fontWeight: 'bold', textAlign: 'center'}}>Yet to be decided</Text>
+        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center',justifyContent: 'space-around', backgroundColor: cardColor, borderTopColor: '#232882', borderTopWidth: 2,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}}>
+          <TouchableOpacity onPress={() => handleModal(content, flag)} style={{flex:1,borderRightColor: '#232882', borderRightWidth: 1}}>
+            <Text style={{color: txtColor, fontWeight: 'bold', flex:1, fontSize:16, textAlign: 'center', textAlignVertical:'center'}}>{flag}</Text>
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => handleModal(content)} style={{flex:1,borderLeftColor: '#232882', borderLeftWidth: 1}}>
+            <Text style={{color: txtColor, fontWeight: 'bold', flex:1, fontSize:16, textAlign: 'center', textAlignVertical:'center'}}>Compare squads</Text>
+          </TouchableOpacity>
+        </View> 
+      ) : (
+        content.result ? (
+          <View style={{flex: 1,backgroundColor: cardColor, borderTopColor: '#232882',borderTopWidth: 1.5, borderBottomLeftRadius: 8, borderBottomRightRadius: 8}}>
+            <Text style={{fontWeight: 'bold',flex:1, fontSize:16, textAlign: 'center', textAlignVertical:'center'}}>{content.result}</Text>
+          </View>
         ) : (
-          <TouchableOpacity onPress={() => handleModal(content)} style={{backgroundColor: '#ea214d', borderTopColor: '#232882', borderTopWidth: 1.8}}>
-            <Text style={{color: 'white', fontWeight: 'bold', textAlign: 'center'}}>Compare squads</Text>
+          <TouchableOpacity onPress={() => handleModal(content)} style={{flex: 1,backgroundColor: cardColor, borderTopColor: '#232882', borderTopWidth: 1.8, borderBottomLeftRadius: 8, borderBottomRightRadius: 8}}>
+            <Text style={{color: txtColor,fontWeight: 'bold', flex:1, fontSize:14, textAlign: 'center', textAlignVertical:'center'}}>Compare squads</Text>
           </TouchableOpacity>
         )
       )
@@ -60,6 +66,7 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       schedule: this.props.screenProps.schedule,
+      flag: '',
       modalVisible: false,
       selectedItem: '',
       filterUpcoming: '',
@@ -100,11 +107,11 @@ export default class Home extends React.Component {
     return upGames;
   }
 
-  handleModalVisibility = (item) => {
+  handleModalVisibility = (item, flag) => {
     this.state.modalVisible ? 
-      this.setState({...this.state, modalVisible: false, selectedItem: ''}) 
+      this.setState({...this.state, modalVisible: false, selectedItem: '', flag: ''}) 
       : 
-      this.setState({...this.state, modalVisible: true, selectedItem: item});
+      this.setState({...this.state, modalVisible: true, selectedItem: item, flag});
   }
 
   componentDidMount() {
@@ -133,6 +140,7 @@ export default class Home extends React.Component {
   render() {
     const upcomingGames = this.state.filterUpcoming || this.state.upcoming;
     const pastGames = this.state.filterPast || this.state.past;
+    const {flag} = this.state;
     return (
       <React.Fragment>
         <AppToolbar toggleDrawer={this.handleDrawer}/>
@@ -144,12 +152,12 @@ export default class Home extends React.Component {
                 showsHorizontalScrollIndicator={false}
                 horizontal={true}
                 data={this.state.today}
-                renderItem={({item}) => <MatchCard key={parseInt(item.match)} content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
+                renderItem={({item}) => <MatchCard key={parseInt(item.match)} cardColor="green" txtColor="white" flag="Live score" content={item} handleModal={this.handleModalVisibility}/>}/>
             </View>
           </View>
           <View style={{flex: 1}}>
             <ScheduledDay day='Upcoming' count={upcomingGames.length}/>
-            <View style={{flex:0,flexDirection: 'row', position: 'absolute', top: -14, left: 320}}>
+            <View style={{flex:0,flexDirection: 'row', position: 'absolute', top: -14, left: 250}}>
               <Text style={{color: 'white', textAlignVertical: 'center'}}>{this.state.selectedTeam}</Text>
               <Picker selectedValue={this.state.selectedTeam} style={{width: 50}} onValueChange={this.handleSelectedTeam}>
                 <Picker.Item label='All' value='All' />
@@ -169,7 +177,7 @@ export default class Home extends React.Component {
               showsHorizontalScrollIndicator={false}
               horizontal={true}
               data={upcomingGames}
-              renderItem={({item}) => <MatchCard key={parseInt(item.match)} content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
+              renderItem={({item}) => <MatchCard key={parseInt(item.match)} cardColor="#ea214d" txtColor="white" content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
           </View>
           <View style={{flex: 1}}>
             <ScheduledDay day='Past' count={pastGames.length}/>
@@ -177,12 +185,15 @@ export default class Home extends React.Component {
               showsHorizontalScrollIndicator={false}
               horizontal={true}
               data={pastGames}
-              renderItem={({item}) => <MatchCard key={parseInt(item.match)} flag='results will be out soon' content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
+              renderItem={({item}) => <MatchCard key={parseInt(item.match)} cardColor="#d3d3d3" txtColor="black" content={item} handleModal={() => this.handleModalVisibility(item)}/>}/>
           </View> 
-          <HomeModal 
-            stats={this.state.selectedItem}
-            display={this.state.modalVisible}
-            closeModal={this.handleModalVisibility}/>
+          {
+            (flag === 'Live score') ? (
+              <ScoreModal closeModal={this.handleModalVisibility} display={this.state.modalVisible} id={this.state.selectedItem.id}/>
+            ) : (
+              <HomeModal stats={this.state.selectedItem} display={this.state.modalVisible} closeModal={this.handleModalVisibility}/>
+            )
+          }
         </View>
       </React.Fragment>
     );

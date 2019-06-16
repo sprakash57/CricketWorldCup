@@ -109,7 +109,7 @@ export default class About extends React.Component {
             <Icon.Button name="logo-google" backgroundColor='#ea214d' size={20} onPress={() => this.handleLink(MOREAPPS)}>
               <Text style={{flex:0, width: 100,flexWrap: 'nowrap',color: 'white', fontSize:16, fontWeight: 'bold'}}>More apps...</Text>
             </Icon.Button>
-            <Text style={{color: 'white'}}>App version 2.1</Text>
+            <Text style={{color: 'white'}}>App version 2.2</Text>
           </View>
         </View>
       </React.Fragment>

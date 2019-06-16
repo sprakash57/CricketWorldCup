@@ -6,4 +6,3 @@ export const MOREAPPS = 'https://play.google.com/store/apps/developer?id=Sunny+P
 export const RATE = 'https://play.google.com/store/apps/details?id=com.insu.sunny.cricketworldcup';
 export const POINTS = 'https://api.myjson.com/bins/imfw1';
 export const FIXTURES = 'https://api.myjson.com/bins/msh4h';
-export const ESPN = 'http://www.espncricinfo.com/scores';

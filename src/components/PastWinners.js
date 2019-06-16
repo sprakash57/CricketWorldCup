@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Modal, Image, TouchableWithoutFeedback } from 'react-native';
 import AppToolbar from './AppToolbar';
 import {winnersList} from '../app-data/winnersList';
-import Icon from 'react-native-vector-icons/Ionicons';
+import AppBackBtn from './AppBackBtn';
 
 const s = StyleSheet.create({
   container: {
@@ -111,12 +111,7 @@ const s = StyleSheet.create({
 const WinnerModal = ({content, display, closeModal}) => (
     <Modal visible={display} onRequestClose={closeModal} animationType='fade'>
       <View style={s.modal_container}>
-        <View style={s.modal_btn}>
-          <TouchableWithoutFeedback onPress={closeModal}>
-            <Icon name='ios-arrow-back' size={20} color='#232882' style={s.modal_btn_icon}/>
-          </TouchableWithoutFeedback>
-          <Text style={s.modal_btn_text} onPress={closeModal}>Back</Text>
-        </View>
+        <AppBackBtn closeModal={closeModal}/>
         <View style={s.modal_image}> 
           {ImageSelction(content.year)}
           <Text style={{fontSize: 16, fontWeight: 'bold', paddingLeft: 5, paddingTop: 7, color:'#232882'}}>{content.captain}</Text>

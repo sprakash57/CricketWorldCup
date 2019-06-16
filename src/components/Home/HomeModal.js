@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Modal, Text, TouchableOpacity, Image} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import {View, Modal, Text, Image} from 'react-native';
 import {s} from './HomeStyle';
+import AppBackBtn from '../AppBackBtn';
 
 const ModalHTHSection = ({team, best}) => (
     <View style={{flex:1, alignItems: 'center', backgroundColor: '#232882', elevation: 4}}>
@@ -31,28 +31,23 @@ const ModalHTHSection = ({team, best}) => (
     </View>
 );
 
-const HeadToHead = ({stats, display, closeModal}) => (
+const HomeModal = ({stats, display, closeModal}) => (
     <Modal visible={display} onRequestClose={closeModal} animationType='fade'>
         {display && (
         <View style={s.modal_container}>
-            <View style={s.modal_btn}>
-                <TouchableOpacity onPress={closeModal}>
-                    <Icon name='ios-arrow-back' size={22} color='#232882' style={s.modal_btn_icon}/>
-                </TouchableOpacity>
-                <Text style={s.modal_btn_text} onPress={closeModal}>Back</Text>
-            </View>
+            <AppBackBtn closeModal={closeModal}/>
             <View style={s.modal_headers}>
                 <Image source={require('../../assets/hth.png')} style={s.modal_headers_image}/>
                 <Text style={s.modal_headers_text}>Head to Head</Text>
             </View>
             <View style={s.modal_stats}>
-                <View style={{flex:1,}}>
-                    <Text style={{color: 'white', fontSize: 18, fontWeight: 'bold', position: 'relative', top: -20}}>Stats</Text>
-                    <Text style={{color: 'white', fontSize: 16}}>Last 5 ODIs</Text>
-                    <Text style={{color: 'white', fontSize: 16}}>Last 5 encounters</Text>
-                    <Text style={{color: 'white', fontSize: 16}}>Win against in WC</Text>
-                    <Text style={{color: 'white', fontSize: 16}}>Finals played</Text>
-                    <Text style={{color: 'white', fontSize: 16}}>World Cup title</Text>
+                <View style={{flex:1}}>
+                    <Text style={{color: 'white', fontSize: 18, flex:0, width: 150, textAlign: 'center', flexWrap:'nowrap', fontWeight: 'bold',position: 'relative', top: -20}}>Stats</Text>
+                    <Text style={{color: 'white', fontSize: 15}}>Last 5 ODIs</Text>
+                    <Text style={{color: 'white', fontSize: 15}}>Last 5 encounters</Text>
+                    <Text style={{color: 'white', fontSize: 15}}>Win against in WC</Text>
+                    <Text style={{color: 'white', fontSize: 15}}>Finals played</Text>
+                    <Text style={{color: 'white', fontSize: 15}}>World Cup title</Text>
                 </View>
                 <View style={{flex:1, alignItems: 'center'}}>
                     <Text style={{color: 'white', fontSize: 18, flex:0, width: 150, textAlign: 'center', flexWrap:'nowrap', fontWeight: 'bold',position: 'relative', top: -20}}>{stats.team1}</Text>
@@ -87,5 +82,5 @@ const HeadToHead = ({stats, display, closeModal}) => (
     </Modal>
 );
 
-export default HeadToHead;
+export default HomeModal;
   

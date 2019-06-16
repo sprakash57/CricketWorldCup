@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
 import AppToolbar from './AppToolbar';
-import {table} from '../app-data/table';
 import Flag from 'react-native-round-flags';
 
 const s = StyleSheet.create({
@@ -47,7 +46,7 @@ export default class PointsTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      table: this.props.screenProps.table || table
+      table: this.props.screenProps.table
     }
   }
 

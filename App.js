@@ -1,21 +1,20 @@
 import React from 'react';
 import { createDrawerNavigator, createAppContainer} from 'react-navigation';
-import {Image, View, Text} from 'react-native';
 import Home from './src/components/Home/Home';
 import About from './src/components/About';
 import PastWinners from './src/components/PastWinners';
 import PointsTable from './src/components/PointsTable';
 import Team from './src/components/Squad/Team';
 import AppDrawer from './src/components/AppDrawer';
-import {schedule} from './src/app-data/schedule';
-import table from './src/app-data/table';
 import {POINTS, FIXTURES} from './src/utils/constants';
+import ErrorScreen from './src/components/ErrorScreen';
+import LoadingScreen from './src/components/LoadingScreen';
 
 class App extends React.Component {
 
   state = {
-    table,
-    schedule,
+    table: '',
+    schedule: '',
     isLoading: true,
     error: null
   }
@@ -37,18 +36,15 @@ class App extends React.Component {
     const {isLoading, error, table, schedule} = this.state;
     if (isLoading) {
       return (
-        <View style={{flex:1, alignItems: 'center', justifyContent: 'center',backgroundColor: '#232882'}}>
-          <Image source={require('./src/assets/spinner.gif')} style={{width: 110, height: 110}}/>
-          <Text style={{flex:0,width: 400, fontFamily: 'san-serif',textAlign: 'center',fontSize: 30, fontWeight: 'bold', color: 'white'}}>Cricket World Cup'19</Text>
-          <Text style={{fontSize: 16,color: 'white', position: 'relative', top: 290}}>Loading...</Text>
-        </View>
+        <LoadingScreen loading="loading..." name="Cricekt World Cup'19" bgColor="#232882" txtColor="white"/>
       )
-    } else {
+    } else if (error){
+      return <ErrorScreen />
+    }else {
       return (
         <MyApp screenProps={{table, schedule}}/>
       );
     }
-    
   }
 }
 
